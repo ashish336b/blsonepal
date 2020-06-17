@@ -1,0 +1,42 @@
+@import "./colors.scss";
+
+a {
+  color: #fff;
+  transition: color 250ms;
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+    transition: color 500ms;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.is-radiusless {
+  border-radius: 0 !important;
+}
+
+.is-borderless {
+  border: none !important;
+}
+
+.btn-outline-white {
+  color: #fff;
+  border-color: #fff;
+  transition: 100ms;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+    transition: 250ms;
+  }
+}
+
+.bg-transparent-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+}
