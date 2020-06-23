@@ -25,6 +25,16 @@
   </div>
 </template>
 
+<script>
+import Separator from "@/components/UI/Separator";
+
+export default {
+  components: {
+    Separator
+  }
+};
+</script>
+
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
 
