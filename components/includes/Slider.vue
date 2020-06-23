@@ -5,46 +5,47 @@
         <img src="/images/logo_.png" class="img-fluid" />
       </li>
 
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-home"></i>
           Home
-        </nuxt-link>
-      </li>
+        </span>
+      </nuxt-link>
 
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+      <nuxt-link to="/aboutus" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-sitemap"></i> About Us
-        </nuxt-link>
-      </li>
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+        </span>
+      </nuxt-link>
+
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-briefcase"></i> Projects
-        </nuxt-link>
-      </li>
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+        </span>
+      </nuxt-link>
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-newspaper"></i> Events
-        </nuxt-link>
-      </li>
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+        </span>
+      </nuxt-link>
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-rss"></i> Blog
-        </nuxt-link>
-      </li>
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+        </span>
+      </nuxt-link>
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-photo-video"></i> Gallery
-        </nuxt-link>
-      </li>
-      <li class="list-group-item pl-4">
-        <nuxt-link to="/">
+        </span>
+      </nuxt-link>
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+        <span>
           <i class="las la-phone"></i> Contact Us
-        </nuxt-link>
-      </li>
-      <li class="list-group-item pl-4 pb-4">
+        </span>
+      </nuxt-link>
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4 pb-4">
         <button class="btn btn-success is-radiusless">Donate</button>
-      </li>
+      </nuxt-link>
     </ul>
   </aside>
 </template>
@@ -59,17 +60,20 @@ aside {
   bottom: 0;
   right: 0;
   z-index: 1024;
-  background-color: rgba(0, 0, 0, 0.6);
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+  -ms-overflow-style: none;
 }
 
 ul {
-  //   width: 70vw;
   height: 100%;
   background-color: #fff;
   li {
     background-color: #fff;
     border: 0;
-    a {
+    cursor: pointer;
+    span {
       font-size: 15px;
       color: $primary;
     }
