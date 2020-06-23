@@ -3,10 +3,24 @@
     <ol class="carousel-indicators">
       <li data-target="#carousel" data-slide-to="0" class="active"></li>
       <li data-target="#carousel" data-slide-to="1"></li>
-      <li data-target="#carousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <div class="item d-flex">
+          <div class="jumbotron mb-0 align-items-center d-flex align-items-center">
+            <div class="container text-white">
+              <h1>WE CAN HELP SOMEONE!</h1>
+              <p
+                class="lead"
+              >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <br />
+              <a class="btn btn-outline-white mr-2" href="#" role="button">DONATE NOW</a>
+              <a class="btn btn-outline-white" href="#" role="button">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
         <div class="item d-flex">
           <div class="jumbotron mb-0 align-items-center d-flex align-items-center">
             <div class="container text-white">
@@ -42,7 +56,8 @@ i {
 .carousel-item {
   width: 100vw;
   height: 512px;
-  background-image: url("https://via.placeholder.com/1920x750");
+  // 1920x750
+  background-image: url("http://via.placeholder.com/1920x750");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

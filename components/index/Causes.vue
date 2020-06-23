@@ -13,8 +13,9 @@
           <div class="col-12 col-md-6 col-lg-4 mb-5" v-for="i in 3" :key="i">
             <div :class="{'d-sm-block d-md-none d-lg-block': i==3}">
               <div class="card is-radiusless is-borderless">
+                <!-- 370x200 -->
                 <img
-                  src="https://via.placeholder.com/370x200"
+                  src="http://via.placeholder.com/370x200"
                   class="card-img-top is-radiusless is-borderless"
                   alt
                 />
@@ -26,7 +27,7 @@
                 </div>
               </div>
               <div class="mt-3 d-flex justify-content-between align-items-center">
-                <buttom class="btn btn-outline-info">DONATE</buttom>
+                <button class="btn btn-outline-info">DONATE</button>
                 <h6 class="mb-0">NPR 25,000 / NPR 50,000</h6>
               </div>
             </div>
@@ -49,11 +50,6 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
-h1 {
-  span {
-    color: $primary;
-  }
-}
 
 .card-body {
   background-color: $card;

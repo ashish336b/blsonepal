@@ -20,10 +20,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-4">
-              <a class="nav-link p-0 py-1 active" href="#">Home</a>
+              <!-- <a class="nav-link p-0 py-1 active" href="#">Home</a> -->
+              <nuxt-link class="nav-link p-0 py-1" to="/" exact-active-class="active">Home</nuxt-link>
             </li>
             <li class="nav-item mx-4">
-              <a class="nav-link p-0 py-1" href="#">About Us</a>
+              <nuxt-link
+                class="nav-link p-0 py-1"
+                to="/aboutus"
+                exact-active-class="active"
+              >About Us</nuxt-link>
             </li>
             <li class="nav-item mx-4">
               <a class="nav-link p-0 py-1" href="#">Projects</a>

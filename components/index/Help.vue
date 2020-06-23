@@ -3,10 +3,7 @@
     <div class="bg-transparent-dark py-5">
       <div class="container py-5">
         <div class="text-center mb-5">
-          <h1>
-            HOW CAN YOU
-            <span>HELP US?</span>
-          </h1>
+          <h1>HOW CAN YOU HELP US?</h1>
           <p
             class="mb-5"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet interdum erat, a pulvinar nibh sodales ac. Pellentesque quis augue non nunc sagittis rutrum.</p>
@@ -38,7 +35,8 @@
 @import "@/assets/scss/elements.scss";
 
 section {
-  background-image: url(https://via.placeholder.com/1920x530);
+  // 1920x530
+  background-image: url(http://via.placeholder.com/1024x283);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;

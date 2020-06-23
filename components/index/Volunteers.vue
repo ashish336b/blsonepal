@@ -13,15 +13,16 @@
         </p>
 
         <div class="row">
-          <div class="col-12 col-sm-6 col-lg-3 mb-5" v-for="i in 4" :key="i">
+          <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-5" v-for="i in 4" :key="i">
             <div class="card is-radiusless is-borderless">
+              <!-- 270x350 -->
               <img
-                src="https://via.placeholder.com/270x350"
+                src="http://via.placeholder.com/270x350"
                 class="card-img-top is-radiusless is-borderless"
                 alt
               />
               <div class="card-body py-5">
-                <h5 class="card-title">Farnado rotia</h5>
+                <h5 class="card-title">Kritish Dhaubanjar</h5>
                 <p class="card-text">Secretery</p>
               </div>
             </div>
@@ -44,11 +45,6 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
-h1 {
-  span {
-    color: $primary;
-  }
-}
 
 .card-body {
   background-color: $card;
