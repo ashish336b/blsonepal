@@ -1,6 +1,6 @@
-# blsonepal
+# Better Life Social Organization Nepal
 
-> Better Life Social Organization
+[![Netlify Status](https://api.netlify.com/api/v1/badges/69622c69-20a1-49ea-8064-a856c448076a/deploy-status)](https://app.netlify.com/sites/blsonepal/deploys)
 
 ## Build Setup
 
