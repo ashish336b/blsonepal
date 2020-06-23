@@ -1,9 +1,11 @@
 <template>
   <div>
     <Header />
-    <Navigation />
+    <Navigation @toggle="toggle=!toggle" />
     <nuxt />
     <Footer />
+
+    <Slider @toggle="toggle=!toggle" v-if="toggle" class="d-md-block d-lg-none" />
   </div>
 </template>
 
@@ -11,12 +13,19 @@
 import Header from "@/components/includes/Header";
 import Navigation from "@/components/includes/Navigation";
 import Footer from "@/components/includes/Footer";
+import Slider from "@/components/includes/Slider";
 
 export default {
+  data() {
+    return {
+      toggle: false
+    };
+  },
   components: {
     Header,
     Navigation,
-    Footer
+    Footer,
+    Slider
   }
 };
 </script>
