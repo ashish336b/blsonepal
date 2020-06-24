@@ -9,11 +9,12 @@
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarSupportedContent"
+          @click="$emit('toggle')"
+        >
+          <!--           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation"-->
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -97,6 +98,15 @@
 @media screen and(min-width: 992px) and(max-width: 1200px) {
   .navbar-nav {
     margin-right: 8px;
+  }
+}
+
+.navbar-toggler {
+  border: 0px !important;
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: none;
   }
 }
 </style>
