@@ -44,7 +44,11 @@
               <a class="nav-link p-0 py-1" href="#">Gallery</a>
             </li>
             <li class="nav-item mx-4">
-              <a class="nav-link p-0 py-1" href="#">Contact Us</a>
+              <nuxt-link
+                class="nav-link p-0 py-1"
+                to="/contactus"
+                exact-active-class="active"
+              >Contact Us</nuxt-link>
             </li>
             <!-- <li class="nav-item dropdown">
             <a
