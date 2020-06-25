@@ -84,4 +84,13 @@ ul {
   z-index: 1024;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 128ms;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0.1;
+}
 </style>
