@@ -37,6 +37,20 @@ a {
   }
 }
 
+.btn-outline-darker {
+  color: $dark;
+  border-color: $dark;
+  transition: 100ms;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+    transition: 250ms;
+  }
+}
+
+
 .bg-transparent-dark {
   background-color: rgba(0, 0, 0, 0.4);
 }
