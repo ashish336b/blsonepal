@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.0",
+    "isotope-layout": "^3.0.6",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
