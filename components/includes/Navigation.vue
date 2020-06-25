@@ -41,7 +41,7 @@
               <a class="nav-link p-0 py-1" href="#">Blog</a>
             </li>
             <li class="nav-item mx-4">
-              <a class="nav-link p-0 py-1" href="#">Gallery</a>
+              <nuxt-link class="nav-link p-0 py-1" to="/gallery" exact-active-class="active">Gallery</nuxt-link>
             </li>
             <li class="nav-item mx-4">
               <nuxt-link
