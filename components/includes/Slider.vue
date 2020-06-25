@@ -5,40 +5,40 @@
         <img src="/images/logo_.png" class="img-fluid" />
       </li>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-home"></i>
           Home
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/aboutus" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/aboutus" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-sitemap"></i> About Us
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-briefcase"></i> Projects
         </span>
       </nuxt-link>
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-newspaper"></i> Events
         </span>
       </nuxt-link>
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-rss"></i> Blog
         </span>
       </nuxt-link>
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/gallery" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-photo-video"></i> Gallery
         </span>
       </nuxt-link>
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4">
+      <nuxt-link to="/contactus" tag="li" class="list-group-item pl-4">
         <span>
           <i class="las la-phone"></i> Contact Us
         </span>
@@ -75,11 +75,16 @@ ul {
     cursor: pointer;
     span {
       font-size: 15px;
-      color: $primary;
+      font-weight: 500;
+      color: $dark;
     }
     button {
-      font-size: 16px;
+      font-size: 15px;
     }
+  }
+
+  .link-item {
+    border-bottom: 1px solid #e3e3e3;
   }
 }
 
