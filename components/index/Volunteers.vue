@@ -13,7 +13,7 @@
         </p>
 
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-5" v-for="i in 4" :key="i">
+          <div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-5" v-for="i in 4" :key="i">
             <div class="card is-radiusless is-borderless">
               <!-- 270x350 -->
               <img
@@ -22,7 +22,8 @@
                 alt
               />
               <div class="card-body py-5">
-                <h5 class="card-title">Kritish Dhaubanjar</h5>
+                <h5 class="card-title d-none d-sm-block">Kritish Dhaubanjar</h5>
+                <h6 class="card-title d-block d-sm-none">Kritish Dhaubanjar</h6>
                 <p class="card-text">Secretery</p>
               </div>
             </div>

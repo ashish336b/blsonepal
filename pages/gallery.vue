@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Preview image="http://via.placeholder.com/1282x720" />
     <Cover current="Gallery" image="http://via.placeholder.com/1920x350" />
     <div class="container py-5 my-5">
       <div class="row">
@@ -29,7 +30,12 @@
       </div>
 
       <div class="row mt-5" id="grid">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 col-grid-item" v-for="i in 8" :key="i">
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 col-grid-item"
+          v-for="i in 8"
+          :key="i"
+          @click="gallery"
+        >
           <!-- 270x300 -->
           <!-- <img src="http://via.placeholder.com/270x300" class="img-fluid" /> -->
           <div
@@ -52,11 +58,13 @@
 import Isotope from "isotope-layout";
 import Cover from "@/components/UI/Cover";
 import Separator from "@/components/UI/Separator";
+import Preview from "@/components/UI/Preview";
 
 export default {
   data() {
     return {
-      isotope: null
+      isotope: null,
+      image: "http://via.placeholder.com/270x300"
     };
   },
 
@@ -68,9 +76,16 @@ export default {
     });
   },
 
+  methods: {
+    gallery() {
+      $("#preview").modal("show");
+    }
+  },
+
   components: {
     Cover,
-    Separator
+    Separator,
+    Preview
   }
 };
 </script>

@@ -32,8 +32,22 @@
                 exact-active-class="active"
               >About Us</nuxt-link>
             </li>
-            <li class="nav-item mx-4">
+            <!-- <li class="nav-item mx-4">
               <a class="nav-link p-0 py-1" href="#">Projects</a>
+            </li>-->
+            <li class="nav-item mx-4 dropdown">
+              <a
+                class="nav-link dropdown-toggle p-0 py-1"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >Projects</a>
+              <div class="dropdown-menu is-radiusless">
+                <a class="dropdown-item" href="#">Upcoming Projects</a>
+                <a class="dropdown-item" href="#">Another Projects</a>
+              </div>
             </li>
             <li class="nav-item mx-4">
               <a class="nav-link p-0 py-1" href="#">Events</a>
@@ -51,23 +65,6 @@
                 exact-active-class="active"
               >Contact Us</nuxt-link>
             </li>
-            <!-- <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-            </li>-->
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <button class="btn btn-outline-success my-2 my-sm-0 is-radiusless" type="submit">DONATE</button>
@@ -100,6 +97,12 @@
   }
 }
 
+.dropdown-item {
+  color: $dark;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
 @media screen and(min-width: 992px) and(max-width: 1200px) {
   .navbar-nav {
     margin-right: 8px;
@@ -113,5 +116,21 @@
     box-shadow: none;
     outline: none;
   }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(64px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.dropdown-menu.show {
+  animation: slideUp 500ms;
 }
 </style>
