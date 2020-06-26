@@ -1,10 +1,11 @@
 <template>
   <div class="bg-white sticky-top shadow-sm">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top">
-        <a class="navbar-brand" href="#">
-          <img src="/images/logo_.png" height="32" alt loading="lazy" />
-        </a>
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <nuxt-link to="/" class="navbar-brand">
+          <img src="/images/logo.jpg" height="64" alt loading="lazy" class="d-none d-lg-block" />
+          <img src="/images/logo.jpg" height="48" alt loading="lazy" class="d-block d-lg-none" />
+        </nuxt-link>
         <button
           class="navbar-toggler"
           type="button"

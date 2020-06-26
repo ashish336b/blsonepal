@@ -2,7 +2,7 @@
   <aside @click="$emit('toggle')">
     <ul class="list-group is-radiusless py-4">
       <li class="list-group-item mb-4">
-        <img src="/images/logo_.png" class="img-fluid" />
+        <img src="/images/logo.jpg" class="img-fluid" />
       </li>
 
       <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">

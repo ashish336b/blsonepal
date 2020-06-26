@@ -15,7 +15,7 @@
               <div class="card is-radiusless is-borderless">
                 <!-- 370x200 -->
                 <img
-                  src="http://via.placeholder.com/370x200"
+                  :src="`/images/causes/cause00${i}.jpg`"
                   class="card-img-top is-radiusless is-borderless"
                   alt
                 />
@@ -26,10 +26,10 @@
                   >Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
                 </div>
               </div>
-              <div class="mt-3 d-flex justify-content-between align-items-center">
+              <!-- <div class="mt-3 d-flex justify-content-between align-items-center">
                 <button class="btn btn-outline-info">DONATE</button>
                 <h6 class="mb-0">NPR 25,000 / NPR 50,000</h6>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>

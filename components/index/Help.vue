@@ -36,7 +36,8 @@
 
 section {
   // 1920x530
-  background-image: url(http://via.placeholder.com/1024x283);
+  // background-image: url(http://via.placeholder.com/1024x283);
+  background-image: url("/images/cover.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
