@@ -56,9 +56,11 @@
           <i class="las la-phone"></i> Contact Us
         </span>
       </nuxt-link>
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4 pb-4">
+      <li class="py-3"></li>
+      <nuxt-link to="/donate" tag="li" class="list-group-item pl-4 pb-4">
         <button class="btn btn-success is-radiusless">Donate</button>
       </nuxt-link>
+      <li class="py-3"></li>
     </ul>
   </aside>
 </template>

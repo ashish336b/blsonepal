@@ -67,7 +67,13 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0 is-radiusless" type="submit">DONATE</button>
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0 is-radiusless" type="submit">DONATE</button> -->
+            <nuxt-link
+              tag="button"
+              to="/donate"
+              class="btn btn-outline-success my-2 my-sm-0 is-radiusless"
+              type="submit"
+            >DONATE</nuxt-link>
           </form>
         </div>
       </nav>
