@@ -15,11 +15,14 @@
       <p class="card-title">Lorem ipsum dolor sit amet</p>
       <p
         class="card-text"
-      >Lorem ipsum dolor sit amet, consectetur adipicing elit. Nullam feugiat dignissim metus, id vestibulum tellus Cras ante commodo.</p>
+      >Lorem ipsum dolor sit amet, consectetur adipicing elit. Nullam feugiat dignissim metus, id vestibulum tellus Cras ante commodo. Lorem ipsum dolor sit amet, consectetur adipicing elit. Nullam feugiat dignissim metus, id vestibulum tellus Cras ante commodo.</p>
+    </div>
+
+    <div class="card-footer bg-white pt-0">
       <nuxt-link
         tag="button"
         to="/blogs/lorem-ipsum-dolor-sit"
-        class="btn btn-sm btn-outline-info my-2"
+        class="btn btn-sm btn-outline-info mb-3"
       >Read More ...</nuxt-link>
     </div>
   </div>
@@ -28,6 +31,12 @@
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
 .card {
+  display: flex;
+  height: 100%;
+  .card-text {
+    height: 64px !important;
+    overflow: hidden;
+  }
   .card-title {
     font-size: 18px;
     font-weight: 500;
@@ -64,5 +73,9 @@
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.card-footer {
+  border-top: 0px;
 }
 </style>
