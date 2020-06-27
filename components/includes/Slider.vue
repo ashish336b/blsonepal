@@ -41,9 +41,9 @@
           <i class="las la-newspaper"></i> Events
         </span>
       </nuxt-link>
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link to="/blogs" tag="li" class="list-group-item pl-4 link-item">
         <span>
-          <i class="las la-rss"></i> Blog
+          <i class="las la-rss"></i> Blogs
         </span>
       </nuxt-link>
       <nuxt-link to="/gallery" tag="li" class="list-group-item pl-4 link-item">
