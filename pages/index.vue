@@ -4,6 +4,8 @@
     <Causes />
     <Help />
     <Volunteers />
+    <Blogs />
+    <Sponsors />
   </div>
 </template>
 
@@ -12,12 +14,17 @@ import Carousel from "@/components/index/Carousel";
 import Causes from "@/components/index/Causes";
 import Help from "@/components/index/Help";
 import Volunteers from "@/components/index/Volunteers";
+import Blogs from "@/components/index/Blogs";
+import Sponsors from "@/components/index/Sponsors";
+
 export default {
   components: {
     Carousel,
     Causes,
     Help,
-    Volunteers
+    Volunteers,
+    Blogs,
+    Sponsors
   }
 };
 </script>

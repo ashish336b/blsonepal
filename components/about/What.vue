@@ -1,7 +1,7 @@
 <template>
   <div class="row py-5 my-5">
     <div class="col-12 text-center">
-      <h1 class="mb-0">
+      <h1>
         WHAT WE
         <span>DO</span>
       </h1>

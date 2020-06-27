@@ -88,7 +88,7 @@
   margin-right: 64px;
   .nav-item {
     .nav-link {
-      font-weight: 400;
+      font-weight: 500;
       font-family: "Raleway", sans-serif;
       border-bottom: 2px solid #fff;
       &:hover {
@@ -105,8 +105,12 @@
 
 .dropdown-item {
   color: $dark;
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Raleway", sans-serif;
+  &:focus,
+  &:active {
+    background-color: #f8f9fa;
+  }
 }
 
 @media screen and(min-width: 992px) and(max-width: 1200px) {

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-lg-6">
       <div class="text-center mb-4">
-        <h1 class="mb-0">
+        <h1>
           ABOUT
           <span>US</span>
         </h1>
