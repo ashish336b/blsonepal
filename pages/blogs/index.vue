@@ -3,8 +3,8 @@
     <Cover current="Our Blog" image="http://via.placeholder.com/1920x350" />
     <div class="container py-5 my-5">
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4" v-for="i in 9" :key="i">
-          <Card />
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4" v-for="post in posts" :key="post.id">
+          <Card  :post="post"/>
         </div>
       </div>
 
@@ -46,6 +46,22 @@ export default {
   components: {
     Cover,
     Card
+  },
+
+  data() {
+    return {
+      posts: [],
+    }
+  },
+
+  mounted() {
+    this.$axios.get('api/webui/blogposts')
+      .then(res => {
+        this.posts = res.data.data;
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 };
 </script>
