@@ -1,6 +1,6 @@
 <template>
   <!-- 1920x350 -->
-  <div :style="`background-image:url(${image})`" class="cover">
+  <div :style="`background-image:url(${coverImage})`" class="cover">
     <div class="jumbotron mb-0 text-center text-white">
       <h1 class="text-uppercase">{{current}}</h1>
       <p class="lead">
@@ -13,7 +13,21 @@
 
 <script>
 export default {
-  props: ["image", "current"]
+  props: ["image", "current"],
+
+  data() {
+    return {
+      coverImage: 'http://via.placeholder.com/1920x350',
+    }
+  },
+
+  created() {
+    let page = this.current.replace(/\s+/g, '');
+    this.$axios.get(`api/webui/getcoverphoto?page=${page}`)
+      .then(res => {
+        this.coverImage = res.data.photo_url;
+      })
+  }
 };
 </script>
 
