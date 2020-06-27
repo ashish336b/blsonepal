@@ -16,7 +16,11 @@
       <p
         class="card-text"
       >Lorem ipsum dolor sit amet, consectetur adipicing elit. Nullam feugiat dignissim metus, id vestibulum tellus Cras ante commodo.</p>
-      <button href="#" class="btn btn-outline-info my-2">Read More ...</button>
+      <nuxt-link
+        tag="button"
+        to="/blogs/lorem-ipsum-dolor-sit"
+        class="btn btn-sm btn-outline-info my-2"
+      >Read More ...</nuxt-link>
     </div>
   </div>
 </template>
