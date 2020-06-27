@@ -13,21 +13,31 @@
         <div class="col-12 col-md-4">
           <label class="mb-3">NAME</label>
           <br />
-          <input class="form-control is-radiusless py-4 mb-4" type="text" placeholder="Your Name" />
+          <input class="form-control is-radiusless py-4 mb-4"
+            :class="errors.get('name') ? 'is-invalid': ''"
+            type="text" placeholder="Your Name"
+            v-model="name" />
+          <div class="invalid-feedback">{{ errors.get('name') }}</div>
         </div>
         <div class="col-12 col-md-4">
           <label class="mb-3">EMAIL</label>
           <br />
-          <input class="form-control is-radiusless py-4 mb-4" type="email" placeholder="Your Email" />
+          <input class="form-control is-radiusless py-4 mb-4"
+            :class="errors.get('email') ? 'is-invalid': ''"
+            type="email" placeholder="Your Email" v-model="email" />
+          <div class="invalid-feedback">{{ errors.get('email') }}</div>
         </div>
         <div class="col-12 col-md-4">
           <label class="mb-3">PHONE</label>
           <br />
           <input
             class="form-control is-radiusless py-4 mb-4"
+            :class="errors.get('phone') ? 'is-invalid': ''"
             type="number"
             placeholder="Your Phone"
+            v-model="phone"
           />
+          <div class="invalid-feedback">{{ errors.get('phone') }}</div>
         </div>
 
         <div class="col-12">
@@ -35,13 +45,16 @@
           <br />
           <textarea
             class="form-control is-radiusless py-4 px-4 mb-4"
+            :class="errors.get('message') ? 'is-invalid': ''"
             placeholder="Message"
             rows="8"
+            v-model="message"
           ></textarea>
+          <div class="invalid-feedback">{{ errors.get('message') }}</div>
         </div>
 
         <div class="col-12">
-          <button class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2">Send your Message</button>
+          <button class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2" @click="sendMessage()">Send your Message</button>
           <button class="btn px-4 py-2 btn-outline-darker font-weight-bold">Reset</button>
         </div>
       </div>
@@ -51,9 +64,71 @@
 
 <script>
 import Separator from "@/components/UI/Separator";
+
+class ErrorsClass {
+
+  constructor() {
+    this.errors = {};
+  }
+
+  get(field) {
+    if(this.errors[field]) {
+      return this.errors[field][0];
+    }
+  }
+
+  record(errors) {
+    this.errors = errors.errors;
+  }
+
+  reset() {
+    this.errors = {};
+  }
+}
+
 export default {
   components: {
     Separator
+  },
+
+  data() {
+    return {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      errors: new ErrorsClass(),
+    }
+  },
+
+  methods: {
+    sendMessage() {
+      let data = {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.message,
+      }
+
+      this.$axios.post('api/webui/sendemail', data)
+        .then(res => {
+          if(res.status == 200) {
+            this.errors.reset();
+            this.resetForm();
+            alert('Message Successfully Sent !');
+          }
+        })
+        .catch(err => {
+          this.errors.record(err.response.data);
+        });
+    },
+
+    resetForm() {
+      this.name = '';
+      this.email = '';
+      this.phone = '';
+      this.message = '';
+    },
   }
 };
 </script>
@@ -89,5 +164,10 @@ input[type="number"] {
 
 button {
   font-size: 13px;
+}
+
+.invalid-feedback {
+  margin-top: -14px;
+  margin-bottom: 8px;
 }
 </style>
