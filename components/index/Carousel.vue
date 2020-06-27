@@ -1,5 +1,42 @@
 <template>
-  <div id="carousel" class="carousel slide" data-ride="carousel">
+  <div>
+  <div  v-if="carousels.length > 0" id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li v-for="(carousel,id) in carousels" :key="carousel.id" data-target="#carousel" :data-slide-to="id" :class="(id===0) ? 'active': ''"></li>
+      <!-- <li data-target="#carousel" data-slide-to="1"></li> -->
+    </ol>
+    <div class="carousel-inner">
+      
+      <div v-for="(carousel,id) in carousels" :key="carousel.id" class="carousel-item" :class="(id===0) ? 'active':''" 
+        :style="`background-image: url(${carousel.photo_url});`">
+        <div class="item d-flex">
+          <div class="jumbotron mb-0 align-items-center d-flex align-items-center">
+            <div class="container text-white">
+              <h1>{{ carousel.title }}</h1>
+              <p
+                class="lead"
+              >{{ carousel.content }}</p>
+              <br />
+              <a class="btn btn-outline-white mr-2" href="#" role="button">DONATE NOW</a>
+              <a class="btn btn-outline-white" href="#" role="button">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <i class="las la-angle-left"></i>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <i class="las la-angle-right"></i>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <div v-else id="carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel" data-slide-to="0" class="active"></li>
       <li data-target="#carousel" data-slide-to="1"></li>
@@ -70,10 +107,29 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+  </div>
 </template>
 
 <script>
-export default {};
+  export default {
+
+    data() {
+      return {
+        carousels: [],
+      }
+    },
+
+    created() {
+
+      this.$axios.get('api/webui/home')
+      .then(res => {
+        this.carousels = res.data.carousels;
+      })
+      .catch(err => {
+        console.log(err.response);
+      });
+    }
+  }
 </script>
 
 <style scoped lang="scss">
