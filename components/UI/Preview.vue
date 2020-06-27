@@ -12,7 +12,7 @@
             class="modal-body d-flex align-items-center justify-content-center flex-column text-white"
           >
             <img :src="image" class="img-fluid" />
-            <p class="py-3">Modal body text goes here.</p>
+            <!-- <p class="py-3">Modal body text goes here.</p> -->
           </div>
         </div>
       </div>
