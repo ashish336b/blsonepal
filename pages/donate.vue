@@ -38,9 +38,12 @@
                 <div class="col-6 col-sm-3 mb-3">
                   <input
                     class="form-control is-radiusless py-4 mb-4"
-                    type="email"
+                    type="text"
+                    v-model="amount"
+                    :class="errors.get('amount') ? 'is-invalid' : ''"
                     placeholder="-- Enter Amount --"
                   />
+                  <div class="invalid-feedback">{{ errors.get('amount') }}</div>
                 </div>
               </div>
               <h6>Would You Like To Make Regular Donations?</h6>
@@ -52,8 +55,11 @@
                   <input
                     class="form-control is-radiusless py-4 mb-4"
                     type="text"
+                    v-model="fname"
+                    :class="errors.get('fname') ? 'is-invalid' : ''"
                     placeholder="Ex. John"
                   />
+                  <div class="invalid-feedback">{{ errors.get('fname') }}</div>
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -62,8 +68,11 @@
                   <input
                     class="form-control is-radiusless py-4 mb-4"
                     type="text"
+                    v-model="lname"
+                    :class="errors.get('lname') ? 'is-invalid' : ''"
                     placeholder="Ex. Doe"
                   />
+                  <div class="invalid-feedback">{{ errors.get('lname') }}</div>
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -72,8 +81,11 @@
                   <input
                     class="form-control is-radiusless py-4 mb-4"
                     type="number"
+                    v-model="phone"
+                    :class="errors.get('phone') ? 'is-invalid' : ''"
                     placeholder="Ex. +977 9851091049"
                   />
+                  <div class="invalid-feedback">{{ errors.get('phone') }}</div>
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -82,8 +94,11 @@
                   <input
                     class="form-control is-radiusless py-4 mb-4"
                     type="email"
+                    v-model="email"
+                    :class="errors.get('email') ? 'is-invalid' : ''"
                     placeholder="Ex. johndoe@example.org"
                   />
+                  <div class="invalid-feedback">{{ errors.get('email') }}</div>
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -93,7 +108,10 @@
                     class="form-control is-radiusless py-4 px-4 mb-4"
                     placeholder="Ex. Kusunti -13, Lalitpur, Nepal"
                     rows="4"
+                    v-model="address"
+                    :class="errors.get('address') ? 'is-invalid' : ''"
                   ></textarea>
+                  <div class="invalid-feedback">{{ errors.get('address') }}</div>
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -103,11 +121,14 @@
                     class="form-control is-radiusless py-4 px-4 mb-4"
                     placeholder="Message"
                     rows="4"
+                    v-model="note"
+                    :class="errors.get('note') ? 'is-invalid' : ''"
                   ></textarea>
+                  <div class="invalid-feedback">{{ errors.get('note') }}</div>
                 </div>
 
                 <div class="col-12 mt-2">
-                  <button class="btn btn-info btn-lg is-radiusless px-4">DONATE</button>
+                  <button class="btn btn-info btn-lg is-radiusless px-4" @click="sendDonation()">DONATE</button>
                 </div>
               </div>
             </div>
@@ -121,10 +142,82 @@
 <script>
 import Cover from "@/components/UI/Cover";
 
+class ErrorsClass {
+
+  constructor() {
+    this.errors = {};
+  }
+
+  get(field) {
+    if(this.errors[field]) {
+      return this.errors[field][0];
+    }
+  }
+
+  record(errors) {
+    this.errors = errors.errors;
+  }
+
+  reset() {
+    this.errors = {};
+  }
+}
+
 export default {
+
   components: {
     Cover
+  },
+
+  data() {
+    return {
+      amount: '',
+      fname: '',
+      lname: '',
+      phone: '',
+      email: '',
+      address: '',
+      note: '',
+      errors: new ErrorsClass(),
+    };
+  },
+
+  methods: {
+    sendDonation() {
+      let data = {
+        amount: this.amount,
+        fname: this.fname,
+        lname: this.lname,
+        phone: this.phone,
+        email: this.email,
+        address: this.address,
+        note: this.note,
+      }
+
+      this.$axios.post('api/webui/storedonation', data)
+        .then(res => {
+          if(res.status === 200) {
+            this.errors.reset();
+            this.resetForm();
+            alert('Your Donation Request has been successfully sent ! You will be contacted from our team shortly !');
+          }
+        })
+        .catch(err => {
+          this.errors.record(err.response.data);
+        });
+    },
+
+    resetForm() {
+      this.amount = '';
+      this.fname = '';
+      this.lname = '';
+      this.phone = '';
+      this.email = '';
+      this.address = '';
+      this.note = '';
+    }
   }
+
 };
 </script>
 
@@ -178,5 +271,9 @@ input[type="number"] {
       border: solid 2px $dark;
     }
   }
+}
+.invalid-feedback {
+  margin-top: -14px;
+  margin-bottom: 8px;
 }
 </style>
