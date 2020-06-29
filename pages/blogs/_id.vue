@@ -116,7 +116,7 @@ export default {
       });
 
     // populate latest blog posts
-    this.$axios.get('api/webui/blogposts')
+    this.$axios.get('api/webui/latestblogposts')
       .then(res => {
         let latestPosts = res.data.data;
         latestPosts = latestPosts.filter(el => el.id != this.$route.params.id);
