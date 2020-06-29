@@ -61,6 +61,9 @@ export default {
       })
       .catch(err => {
         console.log(err);
+      })
+      .finally(() => {
+        this.$store.commit("unset");
       });
   }
 };

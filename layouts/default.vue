@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loader v-if="$store.getters.isLoading" />
     <Header />
     <Navigation @toggle="toggle=!toggle" />
     <nuxt />
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import Loader from "@/components/UI/Loader";
 import Header from "@/components/includes/Header";
 import Navigation from "@/components/includes/Navigation";
 import Footer from "@/components/includes/Footer";
@@ -31,11 +33,30 @@ export default {
     };
   },
   components: {
+    Loader,
     Header,
     Navigation,
     Footer,
     Slider,
     Scroll
+  },
+
+  // Set & Unset CSS Loader
+  created() {
+    this.$store.commit("set");
+    setTimeout(() => {
+      this.$store.commit("unset");
+    }, 1024);
+  },
+
+  // Set & Unset CSS Loader [Every Route]
+  watch: {
+    $route() {
+      this.$store.commit("set");
+      setTimeout(() => {
+        this.$store.commit("unset");
+      }, 1024);
+    }
   }
 };
 </script>

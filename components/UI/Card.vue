@@ -12,18 +12,17 @@
     </div>
 
     <div class="card-body is-radiusless py-4">
-      <p class="card-title">{{ stripTitle(post.title) }}</p>
-<!--       <p
-        class="card-text"
-        v-html="post.content"
-      ></p> -->
+      <p class="card-title">{{ (post.title) }}</p>
       <p class="card-text">
         {{ stripHtml(post.content) }}
       </p>
+    </div>
+
+    <div class="card-footer bg-white pt-0">
       <nuxt-link
         tag="button"
         :to="`/blogs/${post.id}`"
-        class="btn btn-sm btn-outline-info my-2"
+        class="btn btn-sm btn-outline-info mb-3"
       >Read More ...</nuxt-link>
     </div>
   </div>
@@ -63,6 +62,12 @@
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
 .card {
+  display: flex;
+  height: 100%;
+  .card-text {
+    height: 64px !important;
+    overflow: hidden;
+  }
   .card-title {
     font-size: 18px;
     font-weight: 500;
@@ -99,5 +104,9 @@
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.card-footer {
+  border-top: 0px;
 }
 </style>
