@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Carousel />
+    <Carousel :carousels="carousels"/>
     <Causes />
     <Help />
     <Volunteers />
-    <Blogs />
+    <Blogs :latestPosts="latestPosts"/>
     <Sponsors />
   </div>
 </template>
@@ -25,6 +25,28 @@ export default {
     Volunteers,
     Blogs,
     Sponsors
+  },
+
+  data() {
+    return {
+      carousels: [],
+      latestPosts: []
+    }
+  },
+
+  created() {
+
+    this.$axios.get('api/webui/home')
+    .then(res => {
+      this.carousels = res.data.carousels;
+      this.latestPosts = res.data.latestPosts;
+    })
+    .catch(err => {
+      console.log(err.response);
+    });
+    // .finally(() => {
+    //   this.$store.commit("unset");
+    // });
   }
 };
 </script>

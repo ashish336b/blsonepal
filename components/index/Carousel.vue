@@ -112,23 +112,7 @@
 
 <script>
   export default {
-
-    data() {
-      return {
-        carousels: [],
-      }
-    },
-
-    created() {
-
-      this.$axios.get('api/webui/home')
-      .then(res => {
-        this.carousels = res.data.carousels;
-      })
-      .catch(err => {
-        console.log(err.response);
-      });
-    }
+    props: ['carousels']
   }
 </script>
 

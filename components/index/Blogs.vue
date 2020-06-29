@@ -13,14 +13,11 @@
         </p>
 
         <div class="row">
-          <div class="col-12 col-sm-6 col-lg-4 text-left">
-            <Card />
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4 text-left">
-            <Card />
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4 text-left d-sm-none d-md-none d-lg-block">
-            <Card />
+          <div class="col-12 col-sm-6 col-lg-4 text-left"
+            v-for="(post,id) in latestPosts.slice(0,3)"
+            :key="post.id"
+            :class="id===2 ? 'd-sm-none d-md-none d-lg-block' : ''">
+            <Card :post="post"/>
           </div>
         </div>
       </div>
@@ -33,6 +30,7 @@ import Separator from "@/components/UI/Separator";
 import Card from "@/components/UI/Card";
 
 export default {
+  props: ['latestPosts'],
   components: {
     Separator,
     Card
