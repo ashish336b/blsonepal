@@ -50,7 +50,7 @@
               </div>
             </li>
             <li class="nav-item mx-4">
-              <a class="nav-link p-0 py-1" href="#">Events</a>
+              <nuxt-link class="nav-link p-0 py-1" to="/events" exact-active-class="active">Events</nuxt-link>
             </li>
             <li class="nav-item mx-4">
               <nuxt-link class="nav-link p-0 py-1" to="/blogs" active-class="active">Blogs</nuxt-link>
