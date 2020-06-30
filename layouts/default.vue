@@ -114,4 +114,10 @@ ul {
 .page-leave-active {
   opacity: 0.1;
 }
+
+/*  */
+.swal2-html-container {
+  font-size: 15px;
+  text-align: left;
+}
 </style>

@@ -13,25 +13,37 @@
               <div class="row donation">
                 <div class="col-6 col-sm-3 mb-3">
                   <div class="card">
-                    <div class="card-body d-flex justify-content-around">
-                      <i class="las la-check-circle"></i>
+                    <div
+                      class="card-body d-flex justify-content-around"
+                      @click="check=0; amount=100"
+                    >
+                      <i class="las la-check-circle" v-if="check==0"></i>
+                      <i class="las la-circle-notch" v-else></i>
                       $100
                     </div>
                   </div>
                 </div>
                 <div class="col-6 col-sm-3 mb-3">
                   <div class="card">
-                    <div class="card-body d-flex justify-content-around">
-                      <i class="las la-circle-notch"></i>
-                      $100
+                    <div
+                      class="card-body d-flex justify-content-around"
+                      @click="check=1; amount=200"
+                    >
+                      <i class="las la-check-circle" v-if="check==1"></i>
+                      <i class="las la-circle-notch" v-else></i>
+                      $200
                     </div>
                   </div>
                 </div>
                 <div class="col-6 col-sm-3 mb-3">
                   <div class="card">
-                    <div class="card-body d-flex justify-content-around">
-                      <i class="las la-circle-notch"></i>
-                      $100
+                    <div
+                      class="card-body d-flex justify-content-around"
+                      @click="check=2; amount=300"
+                    >
+                      <i class="las la-check-circle" v-if="check==2"></i>
+                      <i class="las la-circle-notch" v-else></i>
+                      $300
                     </div>
                   </div>
                 </div>
@@ -40,6 +52,7 @@
                     class="form-control is-radiusless py-4 mb-4"
                     type="email"
                     placeholder="-- Enter Amount --"
+                    v-model="custom"
                   />
                 </div>
               </div>
@@ -107,7 +120,7 @@
                 </div>
 
                 <div class="col-12 mt-2">
-                  <button class="btn btn-info btn-lg is-radiusless px-4">DONATE</button>
+                  <button class="btn btn-info btn-lg is-radiusless px-4" @click="donate">DONATE</button>
                 </div>
               </div>
             </div>
@@ -120,8 +133,47 @@
 
 <script>
 import Cover from "@/components/UI/Cover";
+import Swal from "sweetalert2";
 
 export default {
+  data() {
+    return {
+      amount: "",
+      check: -1,
+      custom: ""
+    };
+  },
+
+  watch: {
+    custom() {
+      if (this.custom.length > 0) {
+        this.check = -1;
+      }
+    }
+  },
+
+  methods: {
+    donate() {
+      Swal.fire({
+        title: "",
+        html: `<b>Dear John Doe</b>, 
+        <br>Better Life Social Organization Nepal acknowledges your in-kind-gift valued in the amount of <i>$${
+          this.check == -1 ? this.custom : this.amount
+        }</i>.
+        <br><br>We appreciate your support of our organization in this manner. Thank you for your contribution.
+        <br><br>
+        Sincerely,<br>
+        Better Life Social Organization Nepal.
+        `,
+        icon: "success"
+      }).then(result => {
+        if (result) {
+          this.$router.push("/");
+        }
+      });
+    }
+  },
+
   components: {
     Cover
   }
