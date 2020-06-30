@@ -17,7 +17,7 @@
                   <i class="las la-angle-double-left"></i>
                 </a>
               </li>
-              <li class="page-item mx-1">
+              <li class="page-item mx-1 active">
                 <a class="page-link px-3" href="#">1</a>
               </li>
               <li class="page-item mx-1">
@@ -69,6 +69,14 @@ export default {
         color: #fff;
         background-color: $primary;
       }
+    }
+  }
+
+  .active {
+    a {
+      border-color: $primary;
+      background: $primary;
+      color: #fff;
     }
   }
 
