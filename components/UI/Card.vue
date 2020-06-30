@@ -21,7 +21,7 @@
     <div class="card-footer bg-white pt-0">
       <nuxt-link
         tag="button"
-        :to="`/blogs/${post.id}`"
+        :to="`/blogs/${post.slug}`"
         class="btn btn-sm btn-outline-info mb-3"
       >Read More ...</nuxt-link>
     </div>

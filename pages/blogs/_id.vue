@@ -58,7 +58,7 @@
               <div class="col-8 col-md-8">
                 <div class="card-body">
                   <p class="card-text text-muted">
-                    <nuxt-link :to="`/blogs/${post.id}`">{{ stripTitle(post.title) }}</nuxt-link>
+                    <nuxt-link :to="`/blogs/${post.slug}`">{{ stripTitle(post.title) }}</nuxt-link>
                     <br />
                     <small class="text-muted">{{ post.updated_at }}</small>
                   </p>
