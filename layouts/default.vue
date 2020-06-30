@@ -42,22 +42,22 @@ export default {
   },
 
   // Set & Unset CSS Loader
-  created() {
-    this.$store.commit("set");
-    setTimeout(() => {
-      this.$store.commit("unset");
-    }, 1024);
-  },
+  // created() {
+  //   this.$store.commit("set");
+  //   setTimeout(() => {
+  //     this.$store.commit("unset");
+  //   }, 1024);
+  // },
 
-  // Set & Unset CSS Loader [Every Route]
-  watch: {
-    $route() {
-      this.$store.commit("set");
-      setTimeout(() => {
-        this.$store.commit("unset");
-      }, 1024);
-    }
-  }
+  // // Set & Unset CSS Loader [Every Route]
+  // watch: {
+  //   $route() {
+  //     this.$store.commit("set");
+  //     setTimeout(() => {
+  //       this.$store.commit("unset");
+  //     }, 1024);
+  //   }
+  // }
 };
 </script>
 

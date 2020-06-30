@@ -71,6 +71,7 @@ export default {
   },
 
   mounted() {
+    this.$store.commit('set');
     this.$axios.get('api/webui/gallery')
       .then(res => {
         if(res.status === 200) {
@@ -81,6 +82,9 @@ export default {
       })
       .catch(err => {
         console.log(err);
+      })
+      .finally(() => {
+        this.$store.commit('unset');
       });
   },
 

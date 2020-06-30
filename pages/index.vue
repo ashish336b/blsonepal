@@ -34,8 +34,8 @@ export default {
     }
   },
 
-  created() {
-
+  mounted() {
+    this.$store.commit('set');
     this.$axios.get('api/webui/home')
     .then(res => {
       this.carousels = res.data.carousels;
@@ -43,10 +43,10 @@ export default {
     })
     .catch(err => {
       console.log(err.response);
+    })
+    .finally(() => {
+      this.$store.commit('unset');
     });
-    // .finally(() => {
-    //   this.$store.commit("unset");
-    // });
   }
 };
 </script>

@@ -106,7 +106,8 @@ export default {
     },
   },
 
-  created() {
+  mounted() {
+    this.$store.commit('set');
     this.$axios.get(`api/webui/blogposts/show/${this.$route.params.id}`)
       .then(res => {
         this.post = res.data.data;
@@ -124,6 +125,9 @@ export default {
       })
       .catch(err => {
         console.log(err);
+      })
+      .finally(() => {
+        this.$store.commit("unset");
       });
   },
 

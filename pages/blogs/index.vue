@@ -65,6 +65,7 @@ export default {
   },
 
   mounted() {
+    this.$store.commit('set');
     this.$axios.get('api/webui/blogposts')
       .then(res => {
         this.posts = res.data.data;
@@ -75,7 +76,7 @@ export default {
         console.log(err);
       })
       .finally(() => {
-        this.$store.commit("unset");
+        this.$store.commit('unset');
       });
   },
 
