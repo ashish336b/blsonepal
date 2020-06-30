@@ -60,7 +60,7 @@ export default {
       itemsPerPage: 12,
       pagination: {},
       meta: {},
-      currentPage: 1,
+      currentPage: parseInt(localStorage.getItem('blogPostsCurrentPageNumber')) || 1,
     }
   },
 
@@ -68,7 +68,7 @@ export default {
     this.$axios.get('api/webui/blogposts')
       .then(res => {
         this.posts = res.data.data;
-        this.paginate(1);
+        this.paginate(this.currentPage);
         console.log(this.pagination);
       })
       .catch(err => {
@@ -81,6 +81,7 @@ export default {
 
   methods: {
     paginate(current) {
+      localStorage.setItem('blogPostsCurrentPageNumber', current);
       this.pagination = paginate({
         per: this.itemsPerPage,
         limit: 5,
