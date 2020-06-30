@@ -70,7 +70,6 @@ export default {
       .then(res => {
         this.posts = res.data.data;
         this.paginate(this.currentPage);
-        console.log(this.pagination);
       })
       .catch(err => {
         console.log(err);
@@ -90,7 +89,13 @@ export default {
         current,
       });
     }
-  }
+  },
+
+  beforeRouteEnter(to, from, next) {
+    if( from.name !== 'blogs-id')
+      localStorage.removeItem('blogPostsCurrentPageNumber');
+    next();
+  },
 };
 </script>
 
