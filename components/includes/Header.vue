@@ -45,7 +45,7 @@
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
 header {
-  background-color: $primary;
+  background-color: $secondary;
   font-size: 13px;
 }
 .container {

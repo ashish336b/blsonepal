@@ -114,7 +114,11 @@
           <ul class="list-group">
             <li>
               Phone :
-              <a href="#">+977 98510 91049</a>
+              <a href="tel:+9779851091049">+977 98510 91049</a>
+            </li>
+            <li>
+              Phone :
+              <a href="tel:+977015185419">+977 01 5185419</a>
             </li>
             <li>
               Email :
