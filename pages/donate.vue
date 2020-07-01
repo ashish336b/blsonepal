@@ -208,7 +208,7 @@ export default {
   methods: {
     sendDonation() {
       let data = {
-        amount: this.amount,
+        amount: (this.check==-1) ? this.custom : this.amount,
         fname: this.fname,
         lname: this.lname,
         phone: this.phone,
@@ -225,22 +225,20 @@ export default {
             
             Swal.fire({
               title: "",
-              html: `<b>Dear John Doe</b>, 
-              <br>Better Life Social Organization Nepal acknowledges your in-kind-gift valued in the amount of <i>$${
-                this.check == -1 ? this.custom : this.amount
-              }</i>.
+              html: `<b>Dear ${data.fname} ${data.lname}</b>, 
+              <br>Better Life Social Organization Nepal acknowledges your in-kind-gift valued in the amount of <i>$${data.amount}</i>.
               <br><br>We appreciate your support of our organization in this manner. Thank you for your contribution.
               <br><br>
               Sincerely,<br>
               Better Life Social Organization Nepal.
               `,
               icon: "success"
+            })
+            .then(result => {
+              if (result) {
+                this.$router.push("/");
+              }
             });
-            // .then(result => {
-            //   if (result) {
-            //     this.$router.push("/");
-            //   }
-            // });
           }
         })
         .catch(err => {
