@@ -151,7 +151,21 @@
                 </div>
 
                 <div class="col-12 mt-2">
-                  <button class="btn btn-info btn-lg is-radiusless px-4" @click="donate">DONATE</button>
+                  <button
+                    class="btn btn-info btn-lg is-radiusless px-4"
+                    @click="donate"
+                    :disabled="busy"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="spinner-border spinner-border-sm mr-2"
+                        role="status"
+                        aria-hidden="true"
+                        v-if="busy"
+                      ></span>
+                      DONATE
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -171,7 +185,8 @@ export default {
     return {
       amount: "",
       check: -1,
-      custom: ""
+      custom: "",
+      busy: true
     };
   },
 

@@ -43,8 +43,20 @@
         <div class="col-12">
           <button
             class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2"
+            :disabled="busy"
             @click="send"
-          >Send your Message</button>
+          >
+            <!--  -->
+            <div class="d-flex align-items-center">
+              <span
+                class="spinner-border spinner-border-sm mr-2"
+                role="status"
+                aria-hidden="true"
+                v-if="busy"
+              ></span>
+              Send your Message
+            </div>
+          </button>
           <button class="btn px-4 py-2 btn-outline-darker font-weight-bold">Reset</button>
         </div>
       </div>
@@ -57,8 +69,14 @@ import Separator from "@/components/UI/Separator";
 import Swal from "sweetalert2";
 
 export default {
+  data() {
+    return {
+      busy: true
+    };
+  },
   methods: {
     send() {
+      this.busy = true;
       Swal.fire({
         title: "",
         html: `<b>Dear John Doe</b>, 
