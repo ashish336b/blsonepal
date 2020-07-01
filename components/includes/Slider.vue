@@ -36,7 +36,7 @@
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link to="/events" tag="li" class="list-group-item pl-4 link-item">
         <span>
           <i class="las la-newspaper"></i> Events
         </span>

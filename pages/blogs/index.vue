@@ -121,6 +121,14 @@ export default {
     }
   }
 
+  .active {
+    a {
+      border-color: $primary;
+      background: $primary;
+      color: #fff;
+    }
+  }
+
   .disabled {
     a {
       color: #ababab;
