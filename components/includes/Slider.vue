@@ -18,11 +18,11 @@
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item is-borderless">
+      <li class="list-group-item pl-4 link-item is-borderless">
         <span>
           <i class="las la-briefcase"></i> Projects
         </span>
-      </nuxt-link>
+      </li>
 
       <nuxt-link
         to="/volunteering-projects"
