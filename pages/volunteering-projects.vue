@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Preview image="http://via.placeholder.com/1282x720" />
     <Cover current="Volunteering Projects" image="http://via.placeholder.com/1920x350" />
     <div class="container py-5 my-5">
       <div class="row">
