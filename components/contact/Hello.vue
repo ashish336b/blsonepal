@@ -41,7 +41,10 @@
         </div>
 
         <div class="col-12">
-          <button class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2">Send your Message</button>
+          <button
+            class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2"
+            @click="send"
+          >Send your Message</button>
           <button class="btn px-4 py-2 btn-outline-darker font-weight-bold">Reset</button>
         </div>
       </div>
@@ -51,7 +54,32 @@
 
 <script>
 import Separator from "@/components/UI/Separator";
+import Swal from "sweetalert2";
+
 export default {
+  methods: {
+    send() {
+      Swal.fire({
+        title: "",
+        html: `<b>Dear John Doe</b>, 
+        <br><b>Thank you for contacting us.</b><br>
+        We've recieved your message and will respond to you very soon. For urgent inquiries, please call us at:
+        <br>
+        <br>+977 98510 91049
+        <br>+977 01 5185419
+        <br>
+        <br>
+        Thank you,<br>
+        Better Life Social Organization Nepal.
+        `,
+        icon: "success"
+      }).then(result => {
+        if (result) {
+          this.$router.push("/");
+        }
+      });
+    }
+  },
   components: {
     Separator
   }
