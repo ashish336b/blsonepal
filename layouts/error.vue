@@ -16,7 +16,7 @@
           <div class="col-12 text-center py-5 mb-5 bg-white">
             <h2>Want to donate? It’s time to show your huminity</h2>
             <br />
-            <button class="btn btn-outline-info btn-lg">DONATE NOW</button>
+            <nuxt-link to="/donate" tag="button" class="btn btn-outline-info btn-lg">DONATE NOW</nuxt-link>
           </div>
         </div>
       </div>
