@@ -2,7 +2,7 @@
   <div>
     <Cover image="http://via.placeholder.com/1920x350" current="Events" />
     <div class="container py-5 my-5">
-      <Card v-for="i in 6" :key="i" />
+      <Card v-for="(event, i) in events" :key="i" :event="event" />
 
       <div class="row">
         <div class="col-12 my-3">
@@ -43,6 +43,26 @@ export default {
   components: {
     Cover,
     Card
+  },
+
+  data() {
+    return {
+      events: [],
+    }
+  },
+
+  mounted() {
+    this.$store.commit('set');
+    this.$axios.get('api/webui/events')
+      .then(res => {
+        this.events = res.data.data;
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(err => {
+        this.$store.commit('unset');
+      });
   }
 };
 </script>
