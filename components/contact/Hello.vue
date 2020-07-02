@@ -115,7 +115,7 @@ export default {
       phone: '',
       message: '',
       errors: new ErrorsClass(),
-      busy: true,
+      busy: false,
     };
   },
 
@@ -128,6 +128,8 @@ export default {
         message: this.message,
       }
 
+      this.busy = true;
+
       this.$axios.post('api/webui/sendemail', data)
         .then(res => {
           if(res.status == 200) {
@@ -135,7 +137,7 @@ export default {
             this.resetForm();
             Swal.fire({
               title: "",
-              html: `<b>Dear John Doe</b>, 
+              html: `<b>Dear ${data.name}</b>, 
               <br><b>Thank you for contacting us.</b><br>
               We've recieved your message and will respond to you very soon. For urgent inquiries, please call us at:
               <br>
@@ -156,6 +158,9 @@ export default {
         })
         .catch(err => {
           this.errors.record(err.response.data);
+        })
+        .finally(() => {
+          this.busy = false;
         });
     },
 
