@@ -10,8 +10,9 @@
         <p class="mb-5">Our charity help those people who have no hope</p>
 
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 mb-5" v-for="i in 3" :key="i">
-            <div :class="{'d-sm-block d-md-none d-lg-block': i==3}">
+          <div class="col-12 col-md-6 col-lg-4 mb-5" v-for="i in 4" :key="i">
+            <!-- <div :class="{'d-sm-block d-md-none d-lg-block': i==3}"> -->
+            <div v-if="i != 4">
               <div class="card is-radiusless is-borderless">
                 <!-- 370x200 -->
                 <img
@@ -30,6 +31,22 @@
                 <button class="btn btn-outline-info">DONATE</button>
                 <h6 class="mb-0">NPR 25,000 / NPR 50,000</h6>
               </div>-->
+            </div>
+            <div v-if="i == 4" style="height: 100%" class="d-none d-sm-none d-md-block d-lg-none">
+              <nuxt-link
+                to="/aboutus"
+                tag="div"
+                class="card is-radiusless is-borderless"
+                style="height: 100%"
+              >
+                <!-- 370x200 -->
+                <div class="card-body more d-flex align-items-center justify-content-center">
+                  <h4 class="mr-2">Learn More</h4>
+                  <h3>
+                    <i class="las la-arrow-right"></i>
+                  </h3>
+                </div>
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -55,6 +72,14 @@ export default {
   background-color: $card;
   .card-text {
     font-size: 13px;
+  }
+}
+
+.more {
+  border: solid 2px $secondary;
+  background-color: #f1f1f1;
+  &:hover {
+    cursor: pointer;
   }
 }
 </style>

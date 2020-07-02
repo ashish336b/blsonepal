@@ -6,6 +6,37 @@
         <div class="col-12 col-lg-8 offset-lg-2">
           <div class="card py-5 px-4 shadow">
             <div class="card-body">
+              <h3>How you can donate?</h3>
+
+              <p>You can send donations to us via:</p>
+
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row" class="pl-0">Bank Name:</th>
+                    <td class="pr-0">Nepal Investment Bank Ltd.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="pl-0">Branch:</th>
+                    <td class="pr-0">Putalisadak, Kathmandu, Nepal</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="pl-0">Account Holder:</th>
+                    <td class="pr-0">Better Life Social Organization</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="pl-0">Account Number:</th>
+                    <td class="pr-0">01201020256278</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="pl-0">International Swift Code:</th>
+                    <td class="pr-0">NIBLNPKT</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br />
+              <br />
               <h3>Donation Details</h3>
               <br />
               <h6>How Much Would You Like To Donate?</h6>
@@ -140,7 +171,21 @@
                 </div>
 
                 <div class="col-12 mt-2">
-                  <button class="btn btn-info btn-lg is-radiusless px-4" @click="sendDonation()">DONATE</button>
+                  <button
+                    class="btn btn-info btn-lg is-radiusless px-4"
+                    @click="sendDonation"
+                    :disabled="busy"
+                  >
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="spinner-border spinner-border-sm mr-2"
+                        role="status"
+                        aria-hidden="true"
+                        v-if="busy"
+                      ></span>
+                      DONATE
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -194,6 +239,7 @@ export default {
       check: -1,
       custom: "",
       errors: new ErrorsClass(),
+      busy: true
     };
   },
 

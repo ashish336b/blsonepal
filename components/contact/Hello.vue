@@ -54,7 +54,22 @@
         </div>
 
         <div class="col-12">
-          <button class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2" @click="sendMessage()">Send your Message</button>
+          <button
+            class="btn px-4 py-2 btn-outline-darker font-weight-bold mr-2"
+            :disabled="busy"
+            @click="sendMessage"
+          >
+            <!--  -->
+            <div class="d-flex align-items-center">
+              <span
+                class="spinner-border spinner-border-sm mr-2"
+                role="status"
+                aria-hidden="true"
+                v-if="busy"
+              ></span>
+              Send your Message
+            </div>
+          </button>
           <button class="btn px-4 py-2 btn-outline-darker font-weight-bold">Reset</button>
         </div>
       </div>
@@ -64,6 +79,7 @@
 
 <script>
 import Separator from "@/components/UI/Separator";
+import Swal from "sweetalert2";
 
 class ErrorsClass {
 
@@ -87,6 +103,7 @@ class ErrorsClass {
 }
 
 export default {
+
   components: {
     Separator
   },
@@ -98,7 +115,8 @@ export default {
       phone: '',
       message: '',
       errors: new ErrorsClass(),
-    }
+      busy: true,
+    };
   },
 
   methods: {
@@ -115,7 +133,25 @@ export default {
           if(res.status == 200) {
             this.errors.reset();
             this.resetForm();
-            alert('Message Successfully Sent !');
+            Swal.fire({
+              title: "",
+              html: `<b>Dear John Doe</b>, 
+              <br><b>Thank you for contacting us.</b><br>
+              We've recieved your message and will respond to you very soon. For urgent inquiries, please call us at:
+              <br>
+              <br>+977 98510 91049
+              <br>+977 01 5185419
+              <br>
+              <br>
+              Thank you,<br>
+              Better Life Social Organization Nepal.
+              `,
+              icon: "success"
+            }).then(result => {
+              if (result) {
+                this.$router.push("/");
+              }
+            });
           }
         })
         .catch(err => {

@@ -5,7 +5,7 @@
     <div class="container py-5 my-5">
       <div class="row">
         <div class="col-12 text-center">
-          <h1 class="mb-0">
+          <h1>
             OUR
             <span>GALLERY</span>
           </h1>

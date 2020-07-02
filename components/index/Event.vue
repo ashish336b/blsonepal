@@ -1,7 +1,7 @@
 <template>
   <div class="event">
     <div class="my-4 py-5 bg-transparent-dark">
-      <div class="container py-5">
+      <div class="container pt-5 pb-3">
         <div class="row">
           <div class="col-12 col-lg-4 text-white d-flex mb-5">
             <i class="las la-calendar"></i>

@@ -18,21 +18,25 @@
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item is-borderless">
+      <li class="list-group-item pl-4 link-item is-borderless">
         <span>
           <i class="las la-briefcase"></i> Projects
         </span>
-      </nuxt-link>
+      </li>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-5 link-item is-borderless">
+      <nuxt-link
+        to="/volunteering-projects"
+        tag="li"
+        class="list-group-item pl-5 link-item is-borderless"
+      >
         <span>
-          <i class="las la-briefcase"></i> Upcoming Projects
+          <i class="las la-briefcase"></i> Volunteering Projects
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-5 link-item">
+      <nuxt-link to="/upcoming-projects" tag="li" class="list-group-item pl-5 link-item">
         <span>
-          <i class="las la-briefcase"></i> Another Projects
+          <i class="las la-briefcase"></i> Upcoming Projects
         </span>
       </nuxt-link>
 

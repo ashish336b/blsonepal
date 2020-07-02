@@ -45,8 +45,8 @@
                 aria-expanded="false"
               >Projects</a>
               <div class="dropdown-menu is-radiusless">
-                <a class="dropdown-item" href="#">Upcoming Projects</a>
-                <a class="dropdown-item" href="#">Another Projects</a>
+                <nuxt-link class="dropdown-item" to="/volunteering-projects">Volunteering Projects</nuxt-link>
+                <nuxt-link class="dropdown-item" to="/upcoming-projects">Upcoming Projects</nuxt-link>
               </div>
             </li>
             <li class="nav-item mx-4">
