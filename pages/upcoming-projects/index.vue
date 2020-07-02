@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       projects: [],
-      itemsPerPage: 2,
+      itemsPerPage: 12,
       pagination: {},
       currentPage: parseInt(localStorage.getItem('projectsCurrentPageNumber')) || 1,
     }
