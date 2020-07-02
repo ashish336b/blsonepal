@@ -7,8 +7,10 @@
             <i class="las la-calendar"></i>
             <div class="ml-3">
               <h3>Up comming event</h3>
-              <h5 class="text-uppercase">SCHOOL OF CREATIVITY</h5>
-              <p>24 MAY, 2020</p>
+              <h5 class="text-uppercase">
+                {{ (eventTitle === '') ? 'No Events' : eventTitle }}
+              </h5>
+              <p>{{eventDateString}}</p>
             </div>
           </div>
 
@@ -66,65 +68,81 @@ export default {
       days: 0,
       hours: 0,
       minutes: 0,
-      seconds: 0
+      seconds: 0,
+      eventTitle: '',
+      eventDateString: '',
     };
   },
 
   mounted() {
-    let today = new Date();
-    let eventAt = new Date("2020-07-31");
-    eventAt.setHours(0, 0, 0, 0);
+    this.$axios.get('api/webui/latestevent')
+      .then(res => {
+        let data = res.data.data;
+        let today = new Date();
+        // let eventAt = new Date("2020-07-31");
+        // eventAt.setHours(0, 0, 0, 0);
+        let eventAt = new Date(data.date_time);
 
-    let diff = Math.floor((eventAt - today) / 1000); //ms=>sec
+        if(eventAt>today) {
+          this.eventTitle = data.title;
+          this.eventDateString = data.date_time_string;
+        }
 
-    if (diff > 0) {
-      let seconds_in_a_day = 60 * 60 * 24;
-      let seconds_in_an_hour = 60 * 60;
-      let seconds_in_a_minute = 60;
+        let diff = Math.floor((eventAt - today) / 1000); //ms=>sec
 
-      this.days = Math.floor(diff / seconds_in_a_day);
+        if (diff > 0) {
+          let seconds_in_a_day = 60 * 60 * 24;
+          let seconds_in_an_hour = 60 * 60;
+          let seconds_in_a_minute = 60;
 
-      this.hours = Math.floor(
-        (diff - this.days * seconds_in_a_day) / seconds_in_an_hour
-      );
+          this.days = Math.floor(diff / seconds_in_a_day);
 
-      this.minutes = Math.floor(
-        (diff -
-          this.days * seconds_in_a_day -
-          this.hours * seconds_in_an_hour) /
-          seconds_in_a_minute
-      );
+          this.hours = Math.floor(
+            (diff - this.days * seconds_in_a_day) / seconds_in_an_hour
+          );
 
-      this.seconds = Math.floor(
-        diff -
-          this.days * seconds_in_a_day -
-          this.hours * seconds_in_an_hour -
-          this.minutes * seconds_in_a_minute
-      );
+          this.minutes = Math.floor(
+            (diff -
+              this.days * seconds_in_a_day -
+              this.hours * seconds_in_an_hour) /
+              seconds_in_a_minute
+          );
 
-      setInterval(() => {
-        this.seconds--;
-        if (this.seconds < 0) {
-          this.seconds = 59;
-          this.minutes--;
-          if (this.minutes < 0) {
-            this.minutes = 59;
-            this.hours--;
-            if (this.hours < 0) {
-              this.days--;
-              if (this.days < 0) {
-                this.days = 0;
-                this.hours = 0;
-                this.minutes = 0;
-                this.seconds = 0;
-              } else {
-                this.hours = 23;
+          this.seconds = Math.floor(
+            diff -
+              this.days * seconds_in_a_day -
+              this.hours * seconds_in_an_hour -
+              this.minutes * seconds_in_a_minute
+          );
+
+          setInterval(() => {
+            this.seconds--;
+            if (this.seconds < 0) {
+              this.seconds = 59;
+              this.minutes--;
+              if (this.minutes < 0) {
+                this.minutes = 59;
+                this.hours--;
+                if (this.hours < 0) {
+                  this.days--;
+                  if (this.days < 0) {
+                    this.days = 0;
+                    this.hours = 0;
+                    this.minutes = 0;
+                    this.seconds = 0;
+                  } else {
+                    this.hours = 23;
+                  }
+                }
               }
             }
-          }
+          }, 1000);
         }
-      }, 1000);
-    }
+
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 };
 </script>
