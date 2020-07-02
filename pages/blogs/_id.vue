@@ -48,7 +48,7 @@
                   tag="div"
                   class="card-img is-radiusless"
                   :style="`background-image: url(${(post.photos[0] ? post.photos[0].photo_url : defaultLatestPostsPhotoUrl)})`"
-                  to="/blogs/help-girls-to-get-education"
+                  :to="`/blogs/${post.slug}`"
                 ></nuxt-link>
                 <!-- <div
                   class="card-img is-radiusless"
@@ -120,7 +120,7 @@ export default {
     this.$axios.get('api/webui/latestblogposts')
       .then(res => {
         let latestPosts = res.data.data;
-        latestPosts = latestPosts.filter(el => el.id != this.$route.params.id);
+        latestPosts = latestPosts.filter(el => el.slug != this.$route.params.id);
         this.latestPosts = latestPosts;
       })
       .catch(err => {
