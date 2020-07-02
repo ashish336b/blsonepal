@@ -3,8 +3,11 @@
     <Cover current="Our Projects" image="http://via.placeholder.com/1920x350" />
     <div class="container py-5 my-5">
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4" v-for="i in 9" :key="i">
-          <Card />
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4"
+          v-for="project in projects.slice(itemsPerPage* (pagination.current-1), itemsPerPage*pagination.current)"
+          :key="project.id"
+        >
+          <Card :post="project" />
         </div>
       </div>
 
@@ -42,11 +45,55 @@
 <script>
 import Cover from "@/components/UI/Cover";
 import Card from "@/components/UI/Card";
+import paginate from "@/components/utils/paginate";
+
 export default {
   components: {
     Cover,
     Card
-  }
+  },
+
+  data() {
+    return {
+      projects: [],
+      itemsPerPage: 12,
+      pagination: {},
+      currentPage: parseInt(localStorage.getItem('projectsCurrentPageNumber')) || 1,
+    }
+  },
+
+  mounted() {
+    this.$store.commit('set');
+    this.$axios.get('api/webui/projects')
+      .then(res => {
+        this.projects = res.data.data;
+        this.paginate(this.currentPage);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        this.$store.commit('unset');
+      });
+  },
+
+  methods: {
+    paginate(current) {
+      localStorage.setItem('projectsCurrentPageNumber', current);
+      this.pagination = paginate({
+        per: this.itemsPerPage,
+        limit: 5,
+        total: this.projects.length,
+        current,
+      });
+    }
+  },
+
+  beforeRouteEnter(to, from, next) {
+    if( from.name !== 'upcoming-projects-id')
+      localStorage.removeItem('projectsCurrentPageNumber');
+    next();
+  },
 };
 </script>
 
