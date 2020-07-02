@@ -15,22 +15,25 @@
         <div class="col-12 my-3">
           <nav>
             <ul class="pagination ml-auto">
-              <li class="page-item mr-1 disabled">
-                <a class="page-link is-radiusless" href="#">
+              <li class="page-item mr-1"
+                :class="{'disabled': !pagination.previous}">
+                <a class="page-link is-radiusless"
+                  @click="paginate(pagination.previous)"
+                  href="#">
                   <i class="las la-angle-double-left"></i>
                 </a>
               </li>
-              <li class="page-item mx-1 active">
-                <a class="page-link px-3" href="#">1</a>
+              <li class="page-item mx-1"
+              v-for="page in pagination.range"
+              :key="page"
+              :class="{'active': pagination.current == page}" @click="paginate(page)">
+                <a class="page-link px-3" href="#">{{ page }}</a>
               </li>
-              <li class="page-item mx-1">
-                <a class="page-link px-3" href="#">2</a>
-              </li>
-              <li class="page-item mx-1">
-                <a class="page-link px-3" href="#">3</a>
-              </li>
-              <li class="page-item ml-1">
-                <a class="page-link is-radiusless" href="#">
+              <li class="page-item ml-1"
+                :class="{'disabled': !pagination.next}">
+                <a class="page-link is-radiusless"
+                  @click="paginate(pagination.next)"
+                  href="#">
                   <i class="las la-angle-double-right"></i>
                 </a>
               </li>
@@ -56,7 +59,7 @@ export default {
   data() {
     return {
       projects: [],
-      itemsPerPage: 12,
+      itemsPerPage: 2,
       pagination: {},
       currentPage: parseInt(localStorage.getItem('projectsCurrentPageNumber')) || 1,
     }
