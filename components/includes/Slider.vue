@@ -5,22 +5,32 @@
         <img src="/images/logo.jpg" class="img-fluid" />
       </li>
 
-      <nuxt-link to="/" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link
+        to="/"
+        tag="li"
+        class="list-group-item pl-4 link-item"
+        exact-active-class="nuxt-active"
+      >
         <span>
           <i class="las la-home"></i>
-          Home
+          HOME
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/aboutus" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link
+        to="/aboutus"
+        tag="li"
+        class="list-group-item pl-4 link-item"
+        exact-active-class="nuxt-active"
+      >
         <span>
-          <i class="las la-sitemap"></i> About Us
+          <i class="las la-sitemap"></i> ABOUT US
         </span>
       </nuxt-link>
 
       <li class="list-group-item pl-4 link-item is-borderless">
         <span>
-          <i class="las la-briefcase"></i> Projects
+          <i class="las la-briefcase"></i> PROJECTS
         </span>
       </li>
 
@@ -28,36 +38,62 @@
         to="/volunteering-projects"
         tag="li"
         class="list-group-item pl-5 link-item is-borderless"
+        exact-active-class="nuxt-active"
       >
         <span>
           <i class="las la-briefcase"></i> Volunteering Projects
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/upcoming-projects" tag="li" class="list-group-item pl-5 link-item">
+      <nuxt-link
+        to="/upcoming-projects"
+        tag="li"
+        class="list-group-item pl-5 link-item"
+        exact-active-class="nuxt-active"
+      >
         <span>
           <i class="las la-briefcase"></i> Upcoming Projects
         </span>
       </nuxt-link>
 
-      <nuxt-link to="/events" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link
+        to="/events"
+        tag="li"
+        class="list-group-item pl-4 link-item"
+        exact-active-class="nuxt-active"
+      >
         <span>
-          <i class="las la-newspaper"></i> Events
+          <i class="las la-newspaper"></i> EVENTS
         </span>
       </nuxt-link>
-      <nuxt-link to="/blogs" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link
+        to="/blogs"
+        tag="li"
+        class="list-group-item pl-4 link-item"
+        active-class="nuxt-active"
+      >
         <span>
-          <i class="las la-rss"></i> Blogs
+          <i class="las la-rss"></i> BLOGS
         </span>
       </nuxt-link>
-      <nuxt-link to="/gallery" tag="li" class="list-group-item pl-4 link-item">
+      <nuxt-link
+        to="/gallery"
+        tag="li"
+        class="list-group-item pl-4 link-item"
+        exact-active-class="nuxt-active"
+      >
         <span>
-          <i class="las la-photo-video"></i> Gallery
+          <i class="las la-photo-video"></i> GALLERY
         </span>
       </nuxt-link>
-      <nuxt-link to="/contactus" tag="li" class="list-group-item pl-4">
+      <nuxt-link
+        to="/contactus"
+        tag="li"
+        class="list-group-item pl-4 link-item"
+        exact-active-class="nuxt-active"
+      >
         <span>
-          <i class="las la-phone"></i> Contact Us
+          <i class="las la-phone"></i> CONTACT US
         </span>
       </nuxt-link>
       <li class="py-3"></li>
@@ -95,7 +131,8 @@ ul {
     span {
       font-size: 15px;
       font-weight: 500;
-      color: $dark;
+      font-family: "Roboto Mono", monospace;
+      color: rgba(0, 0, 0, 0.8);
     }
     button {
       font-size: 15px;
@@ -103,8 +140,16 @@ ul {
   }
 
   .link-item {
-    border-bottom: 1px solid #e3e3e3;
+    &:hover {
+      background-color: #fbfbfb;
+    }
+    // border-bottom: 1px solid #e3e3e3;
   }
+}
+
+.nuxt-active {
+  border-left: 4px $secondary solid !important;
+  background-color: #fbfbfb;
 }
 
 @media screen and (max-width: 576px) {
