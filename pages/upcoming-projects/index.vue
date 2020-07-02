@@ -7,7 +7,7 @@
           v-for="project in projects.slice(itemsPerPage* (pagination.current-1), itemsPerPage*pagination.current)"
           :key="project.id"
         >
-          <Card :post="project" />
+          <Card :cardItem="project" type="project" />
         </div>
       </div>
 

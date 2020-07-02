@@ -3,7 +3,7 @@
     <!-- <img src="https://via.placeholder.com/370x200" class="card-img-top is-radiusless" /> -->
     <div class="card-img">
       <div class="date d-flex align-items-center justify-content-center">
-        <h6 class="text-white mb-0">{{ post.updated_at_day_month }}</h6>
+        <h6 class="text-white mb-0">{{ cardItem.updated_at_day_month }}</h6>
       </div>
       <div
         class="card-img-top is-radiusless"
@@ -12,16 +12,16 @@
     </div>
 
     <div class="card-body is-radiusless py-4">
-      <p class="card-title">{{ (post.title) }}</p>
+      <p class="card-title">{{ (cardItem.title) }}</p>
       <p class="card-text">
-        {{ stripHtml(post.content) }}
+        {{ stripHtml(cardItem.content) }}
       </p>
     </div>
 
     <div class="card-footer bg-white pt-0">
       <nuxt-link
         tag="button"
-        :to="`/blogs/${post.slug}`"
+        :to="(type==='post') ? `/blogs/${cardItem.slug}` : `/upcoming-projects/${cardItem.slug}`"
         class="btn btn-sm btn-outline-info mb-3"
       >Read More ...</nuxt-link>
     </div>
@@ -30,7 +30,7 @@
 
 <script>
   export default {
-    props: ['post'],
+    props: ['cardItem', 'type'],
     methods: {
 
       stripTitle(title) {
@@ -50,8 +50,8 @@
       },
 
       photoUrl() {
-        if(this.post.photos.length > 0) {
-          return this.post.photos[0].photo_url;
+        if(this.cardItem.photos.length > 0) {
+          return this.cardItem.photos[0].photo_url;
         }
         else return 'https://via.placeholder.com/370x200';
       }

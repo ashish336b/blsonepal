@@ -6,7 +6,7 @@
         <div class="col-12 col-sm-6 col-md-6 col-lg-4"
           v-for="post in posts.slice(itemsPerPage* (pagination.current-1), itemsPerPage*pagination.current)"
           :key="post.id">
-          <Card  :post="post"/>
+          <Card  :cardItem="post" type="post"/>
         </div>
       </div>
 
