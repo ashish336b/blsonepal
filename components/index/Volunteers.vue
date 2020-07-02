@@ -13,19 +13,41 @@
         </p>
 
         <div class="row">
-          <div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-5" v-for="i in 4" :key="i">
+          <div
+            class="col-6 col-sm-6 col-md-3 col-lg-2 mb-5 d-flex"
+            v-for="(volunteer, i) in volunteers"
+            :key="i"
+          >
             <div class="card is-radiusless is-borderless">
               <!-- 270x350 -->
               <img
-                src="http://via.placeholder.com/270x350"
+                :src="`/images/volunteers/${volunteer.name.replace(/ /g, '_')}.png`"
                 class="card-img-top is-radiusless is-borderless"
                 alt
               />
               <div class="card-body py-5">
-                <h5 class="card-title d-none d-sm-block">Kritish Dhaubanjar</h5>
-                <h6 class="card-title d-block d-sm-none">Kritish Dhaubanjar</h6>
-                <p class="card-text">Secretery</p>
+                <!-- <h5 class="card-title d-none d-sm-block">Kritish Dhaubanjar</h5> -->
+                <h6 class="card-title">{{volunteer.name}}</h6>
+                <p class="card-text">{{volunteer.position}}</p>
               </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-5 d-flex">
+            <div class="card is-radiusless is-borderless w-100">
+              <!-- 270x350 -->
+              <!-- <img class="card-img-top is-radiusless is-borderless" alt /> -->
+              <nuxt-link
+                tag="div"
+                to="/contactus"
+                class="card-body more py-5 d-flex flex-column justify-content-center"
+              >
+                <h5 class="card-title">Join Us</h5>
+                <h3>
+                  <i class="las la-arrow-right"></i>
+                </h3>
+                <!-- <h6 class="card-title">{{volunteer.name}}</h6> -->
+                <!-- <p class="card-text">{{volunteer.position}}</p> -->
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -38,6 +60,56 @@
 import Separator from "@/components/UI/Separator";
 
 export default {
+  data() {
+    return {
+      volunteers: [
+        {
+          name: "Bhupal Niroula",
+          position: "Founder"
+        },
+        {
+          name: "Dipak Niroula",
+          position: "President"
+        },
+        {
+          name: "Bhawana Khatri",
+          position: "Vice President"
+        },
+        {
+          name: "Shaan Niroula",
+          position: "Secretory"
+        },
+        {
+          name: "Padam Niroula",
+          position: "International Programs Coordinator"
+        },
+        {
+          name: "Sharmila Karki",
+          position: "Program Coordinators"
+        },
+        {
+          name: "Arju Dotel",
+          position: "Programs Manager"
+        },
+        {
+          name: "Sangita Basnet",
+          position: "Office Manager"
+        },
+        {
+          name: "Kamal Raj Dahal",
+          position: "Incharge Blso"
+        },
+        {
+          name: "Dabit Niroula",
+          position: "Tours Co-Ordinator"
+        },
+        {
+          name: "Kalpana Thapa",
+          position: "Volunteer Program Supervisor"
+        }
+      ]
+    };
+  },
   components: {
     Separator
   }
@@ -52,5 +124,10 @@ export default {
   .card-text {
     font-size: 13px;
   }
+}
+
+.more {
+  border: solid 2px #0aaac0;
+  cursor: pointer;
 }
 </style>
