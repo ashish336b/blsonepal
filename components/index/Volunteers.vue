@@ -20,6 +20,11 @@
           >
             <div class="card is-radiusless is-borderless">
               <!-- 270x350 -->
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <a href="#">
+                  <i class="lab la-facebook-f"></i>
+                </a>
+              </div>
               <img
                 :src="`/images/volunteers/${volunteer.name.replace(/ /g, '_')}.png`"
                 class="card-img-top is-radiusless is-borderless"
@@ -129,5 +134,61 @@ export default {
 .more {
   border: solid 2px #0aaac0;
   cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  background-color: $secondary;
+  opacity: 0.5;
+  width: 100%;
+  animation: shrink ease-in 128ms forwards;
+  a {
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes shrink {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 0%;
+  }
+}
+
+.card:hover {
+  .overlay {
+    animation: grow ease-out 256ms forwards;
+    a {
+      opacity: 1;
+    }
+  }
+}
+
+.la-facebook-f {
+  font-size: 20px;
+  padding: 6px;
+}
+i {
+  font-size: 24px;
+  border: 2px solid #fff;
+  padding: 4px;
+  margin-right: 8px;
+
+  &:hover {
+    color: $dark;
+    border-color: $dark;
+  }
 }
 </style>
