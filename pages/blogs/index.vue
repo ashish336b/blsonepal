@@ -47,7 +47,7 @@
 <script>
 import Cover from "@/components/UI/Cover";
 import Card from "@/components/UI/Card";
-import paginate from "@/pages/blogs/paginate";
+import paginate from "@/components/utils/paginate";
 export default {
   components: {
     Cover,
