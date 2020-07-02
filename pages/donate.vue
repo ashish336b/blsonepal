@@ -239,7 +239,7 @@ export default {
       check: -1,
       custom: "",
       errors: new ErrorsClass(),
-      busy: true
+      busy: false,
     };
   },
 
@@ -262,6 +262,8 @@ export default {
         address: this.address,
         note: this.note,
       }
+
+      this.busy = true;
 
       this.$axios.post('api/webui/storedonation', data)
         .then(res => {
@@ -289,6 +291,9 @@ export default {
         })
         .catch(err => {
           this.errors.record(err.response.data);
+        })
+        .finally(() => {
+          this.busy = false;
         });
     },
 
