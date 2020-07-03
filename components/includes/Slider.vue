@@ -35,6 +35,17 @@
       </li>
 
       <nuxt-link
+        to="/children"
+        tag="li"
+        class="list-group-item pl-5 link-item is-borderless"
+        exact-active-class="nuxt-active"
+      >
+        <span>
+          <i class="las la-briefcase"></i> Children Profile
+        </span>
+      </nuxt-link>
+
+      <nuxt-link
         to="/volunteering-projects"
         tag="li"
         class="list-group-item pl-5 link-item is-borderless"

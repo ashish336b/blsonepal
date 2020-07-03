@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="bg-transparent-dark py-5">
+    <div class="bg-transparent-darker py-5">
       <div class="container py-5">
         <div class="text-center mb-5">
           <h1>HOW CAN YOU HELP US?</h1>
@@ -43,6 +43,10 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+}
+
+.bg-transparent-darker {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and(max-width: 767px ) {

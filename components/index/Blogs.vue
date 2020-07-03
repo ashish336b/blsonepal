@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-5 py-5">
+  <div class="my-5 py-5">
     <div class="container">
       <div class="text-center">
         <h1>
