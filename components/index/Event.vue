@@ -1,5 +1,5 @@
 <template>
-  <div class="event">
+  <div class="event":style="`background-image: url('${eventPhoto}')`">
     <div class="my-4 py-5 bg-transparent-dark">
       <div class="container pt-5 pb-3">
         <div class="row">
@@ -71,6 +71,7 @@ export default {
       seconds: 0,
       eventTitle: '',
       eventDateString: '',
+      eventPhoto: 'https://via.placeholder.com/1920x250',
     };
   },
 
@@ -86,6 +87,9 @@ export default {
         if(eventAt>today) {
           this.eventTitle = data.title;
           this.eventDateString = data.date_time_string;
+          if(data.photos[0]) {
+            this.eventPhoto = data.photos[0].photo_url;
+          }
         }
 
         let diff = Math.floor((eventAt - today) / 1000); //ms=>sec
