@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       events: [],
-      itemsPerPage: 12,
+      itemsPerPage: this.$store.state.itemsPerPage,
       pagination: {},
       currentPage: 1,
     }

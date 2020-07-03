@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       posts: [],
-      itemsPerPage: 12,
+      itemsPerPage: this.$store.state.itemsPerPage,
       pagination: {},
       meta: {},
       currentPage: parseInt(localStorage.getItem('blogPostsCurrentPageNumber')) || 1,

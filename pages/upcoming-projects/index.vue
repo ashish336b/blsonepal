@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       projects: [],
-      itemsPerPage: 12,
+      itemsPerPage: this.$store.state.itemsPerPage,
       pagination: {},
       currentPage: parseInt(localStorage.getItem('projectsCurrentPageNumber')) || 1,
     }
