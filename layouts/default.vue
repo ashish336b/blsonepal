@@ -120,4 +120,15 @@ ul {
   font-size: 15px;
   text-align: left;
 }
+
+/*  */
+
+.owl-dot:focus {
+  outline: none !important;
+}
+
+.owl-next,
+.owl-prev {
+  border-radius: 0 !important;
+}
 </style>
