@@ -7,12 +7,14 @@
           <span>CAUSES</span>
         </h1>
         <Separator />
-        <p class="mb-5">Our charity help those people who have no hope</p>
+        <p
+          class="mb-5"
+        >We're partnering with donors and local volunteers to tackle Nepal's greatest problems.</p>
 
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4 mb-5" v-for="i in 4" :key="i">
             <!-- <div :class="{'d-sm-block d-md-none d-lg-block': i==3}"> -->
-            <div v-if="i != 4">
+            <div v-if="i != 4" class="d-flex">
               <div class="card is-radiusless is-borderless">
                 <!-- 370x200 -->
                 <img
@@ -21,10 +23,8 @@
                   alt
                 />
                 <div class="card-body py-5">
-                  <h5 class="card-title">Children to get education</h5>
-                  <p
-                    class="card-text"
-                  >Lorem ipsum dolor sit amet, onsectetur adipiscing cons ectetur nulla. Sed at ullamcorper risus.</p>
+                  <h5 class="card-title">{{causes[i - 1].title}}</h5>
+                  <p class="card-text">{{causes[i - 1].description}}</p>
                 </div>
               </div>
               <!-- <div class="mt-3 d-flex justify-content-between align-items-center">
@@ -59,6 +59,30 @@
 import Separator from "@/components/UI/Separator";
 
 export default {
+  data() {
+    return {
+      causes: [
+        {
+          title: "Education For Children",
+          description:
+            "Every last child deserves the opportunity to learn. BLSO Nepal works every day to ensure all children have the best chance to learn.",
+          image: "/images/causes/cause001.jpg"
+        },
+        {
+          title: "Health For All",
+          description:
+            "Our Volunteers raise awareness by demonstrating related activities among rural people about health and hygiene.",
+          image: "/images/causes/cause002.jpg"
+        },
+        {
+          title: "Preventing Human Trafficking",
+          description:
+            "Help Draft laws and create comprehensive national anti-trafficking strategies, also assisting with resources to implement them.",
+          image: "/images/causes/cause003.jpg"
+        }
+      ]
+    };
+  },
   components: {
     Separator
   }
@@ -81,5 +105,9 @@ export default {
   &:hover {
     cursor: pointer;
   }
+}
+
+.d-flex {
+  height: 100%;
 }
 </style>

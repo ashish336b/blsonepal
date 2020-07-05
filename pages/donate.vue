@@ -32,9 +32,13 @@
                     <th scope="row" class="pl-0">International Swift Code:</th>
                     <td class="pr-0">NIBLNPKT</td>
                   </tr>
+                  <tr>
+                    <th scope="row" class="pl-0">Other:</th>
+                    <td class="pr-0">Money Gram, Western Union etc</td>
+                  </tr>
                 </tbody>
               </table>
-
+              <img src="/images/donateus.jpg" class="img-fluid my-4" />
               <br />
               <br />
               <h3>Donation Details</h3>

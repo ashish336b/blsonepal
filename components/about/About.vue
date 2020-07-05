@@ -79,6 +79,31 @@
         </ul>We are grateful for the tireless efforts of our volunteer staff and junior volunteers in the community. If you see an opportunity to provide support, please contact us. Join us - give your support in cash or kind today.
       </div>
     </div>
+
+    <div class="row my-5 py-5">
+      <div class="col-12">
+        <div class="text-center mb-4">
+          <h1>
+            OUR
+            <span>VISION &amp; MISSION</span>
+          </h1>
+          <Separator />
+        </div>
+        <ul>
+          <li>To raise the standard living of all children to at least subsistence level.</li>
+          <li>To help and encourage children to attain a minimum level of education.</li>
+          <li>To demonstrate the skills required for survival through the provision of support for education, clothing and nutrition.</li>
+        </ul>
+
+        <p>
+          BLSO is always eager to give a hand to those children who believe they have no future and are in great need of help to attain a minimum level of security and knowledge. Most parents are unable to send their children to school due to their very low income or absence of income. BLSO gives support and helps these children make a first step towards school attendance. Established in 2011, first carried out a study to ascertain the situation of those people living in remote areas. What was noted was the lack of education and suffering amongst children who have nothing and no hope. Many families in these areas have less than the subsistence minimum and there is no possibility of their children being able to go to school.
+          <br />
+          <br />We currently have 9 hard working, dedicated volunteers working with us. Up until now we have been operating in eastern Nepal, focusing mainly on children in remote country districts, who are completely without hope and have no future. We are here to help them build a future.
+          <br />
+          <br />We believe we can help the Nepalese people to build a better future by providing a trustworthy and valuable bridging mediation service.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

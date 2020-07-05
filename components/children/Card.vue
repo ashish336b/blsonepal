@@ -2,30 +2,41 @@
   <div class="row mb-5">
     <span :id="cardId"></span>
     <div class="col-12 col-md-5 mb-4">
-      <div class="image" style="background-image:url(https://via.placeholder.com/370x250)">
-        <div class="date d-flex align-items-center justify-content-center">
+      <!-- <div class="image" style="background-image:url(https://via.placeholder.com/370x250)"> -->
+      <div class="image" :style="`background-image:url(${info.image})`">
+        <!-- <div class="date d-flex align-items-center justify-content-center">
           <h6 class="text-white mb-0">24 MAY, 2020</h6>
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col-12 col-md-7">
-      <h5 class="text-uppercase">ZAFARI JAMITH</h5>
+      <h5 class="text-uppercase">{{info.name}}</h5>
 
-      <p>
+      <!-- <p>
         <i class="las la-map-marker"></i>
         New Jorgia
-      </p>
+      </p>-->
 
-      <p>Anish Kapari is a 10-year-old boy. His family are without shelter and have a low income. They do not earn enough to cover their daily expenses. They want to send their son to school but cannot, due to a lack of financial support. Anish wants to go to school. He wants to become a social worker. We are waiting for your sponsorship.</p>
+      <p>{{info.description}}</p>
 
-      <button class="btn btn-outline-info btn-sm">DONATE FOR ZAFARI JAMITH</button>
+      <nuxt-link
+        tag="button"
+        to="/donate"
+        class="btn btn-outline-info btn-sm"
+      >DONATE FOR {{firstName(info.name)}}</nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["cardId"]
+  props: ["cardId", "info"],
+
+  methods: {
+    firstName(name) {
+      return name.toUpperCase();
+    }
+  }
 };
 </script>
 
