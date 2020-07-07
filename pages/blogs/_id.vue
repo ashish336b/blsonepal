@@ -111,18 +111,16 @@ export default {
 
   mounted() {
     this.$store.commit('set');
-    this.$axios.get(`api/webui/blogposts/show/${this.$route.params.id}`)
-      .then(res => {
-        this.post = res.data.data;
-      })
-      .catch(err => {
-        console.log(err.response);
-      });
 
-    // populate latest blog posts
-    this.$axios.get('api/webui/latestblogposts')
-      .then(res => {
-        let latestPosts = res.data.data;
+    Promise.all([
+      this.$axios.get(`api/webui/blogposts/show/${this.$route.params.id}`),
+      this.$axios.get('api/webui/latestblogposts')
+      ])
+      .then(results => {
+
+        this.post = results[0].data.data;
+
+        let latestPosts = results[1].data.data;
         latestPosts = latestPosts.filter(el => el.slug != this.$route.params.id);
         this.latestPosts = latestPosts;
       })

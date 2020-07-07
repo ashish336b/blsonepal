@@ -117,23 +117,20 @@ export default {
 
   mounted() {
     this.$store.commit('set');
-    this.$axios.get(`api/webui/projects/show/${this.$route.params.id}`)
-      .then(res => {
-        this.project = res.data.data;
-      })
-      .catch(err => {
-        console.log(err.response);
-      });
+    Promise.all([
+      this.$axios.get(`api/webui/projects/show/${this.$route.params.id}`),
+      // populate latest projects
+      this.$axios.get('api/webui/latestprojects')
+    ])
+      .then(results => {
+        this.project = results[0].data.data;
 
-    // populate latest projects
-    this.$axios.get('api/webui/latestprojects')
-      .then(res => {
-        let latestProjects = res.data.data;
+        let latestProjects = results[1].data.data;
         latestProjects = latestProjects.filter(el => el.slug != this.$route.params.id);
         this.latestProjects = latestProjects;
       })
       .catch(err => {
-        console.log(err);
+        console.log(err.response);
       })
       .finally(() => {
         this.$store.commit("unset");
