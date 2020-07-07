@@ -39,15 +39,16 @@
           <hr class="mt-1" />
           <ul class="list-group">
             <!-- EMPTY -->
-            <li>
+            <li v-if="footerProjects.length==0">
               <a href="#">Please update with our projects, events and confirm you presence.</a>
             </li>
             <!-- ELSE -->
-            <!-- <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Education for all
+             <li v-else v-for="project in footerProjects"
+              :key="project.id">
+              <a :href="`/upcoming-projects/${project.slug}`">
+                <i class="las la-angle-right"></i> {{ project.title.substr(0, 10) }} ...
               </a>
-            </li>-->
+            </li>
           </ul>
         </div>
 
@@ -118,6 +119,25 @@
     </div>
   </footer>
 </template>
+<script>
+  export default {
+    data()  {
+      return {
+        footerProjects: [],
+      }
+    },
+
+    created() {
+      this.$axios.get('api/webui/footerprojects')
+        .then(res => {
+          this.footerProjects = res.data;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  };
+</script>
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
