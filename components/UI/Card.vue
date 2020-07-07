@@ -3,7 +3,7 @@
     <!-- <img src="https://via.placeholder.com/370x200" class="card-img-top is-radiusless" /> -->
     <div class="card-img">
       <div class="date d-flex align-items-center justify-content-center">
-        <h6 class="text-white mb-0">{{ cardItem.updated_at_day_month }}</h6>
+        <h6 class="text-white mb-0">{{ cardItem.created_at_day_month }}</h6>
       </div>
       <div
         class="card-img-top is-radiusless"

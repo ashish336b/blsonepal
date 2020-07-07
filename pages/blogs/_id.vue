@@ -9,7 +9,7 @@
               <h3 class="font-weight-normal">{{ post.title }}</h3>
               <p class="text-muted">
                 <i class="las la-user-tie"></i> By: Admin |
-                <i class="las la-calendar"></i> {{ post.updated_at }}
+                <i class="las la-calendar"></i> {{ post.created_at }}
               </p>
 
               <img :src="post.photos[0] ? post.photos[0].photo_url: defaultMainPostPhotoUrl" class="img-fluid" width="100%" />
@@ -60,7 +60,7 @@
                   <p class="card-text text-muted">
                     <nuxt-link :to="`/blogs/${post.slug}`">{{ stripTitle(post.title) }}</nuxt-link>
                     <br />
-                    <small class="text-muted">{{ post.updated_at }}</small>
+                    <small class="text-muted">{{ post.created_at }}</small>
                   </p>
                 </div>
               </div>

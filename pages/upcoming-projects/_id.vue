@@ -9,7 +9,7 @@
               <h3 class="font-weight-normal">{{project.title}}</h3>
               <p class="text-muted">
                 <i class="las la-user-tie"></i> By: Admin |
-                <i class="las la-calendar"></i> {{ project.updated_at }}
+                <i class="las la-calendar"></i> {{ project.created_at }}
               </p>
 
               <img :src="project.photos[0] ? project.photos[0].photo_url: defaultMainProjectPhotoUrl" class="img-fluid" width="100%" />
@@ -66,7 +66,7 @@
                       :to="`/upcoming-projects/${project.slug}`"
                     >{{ stripTitle(project.title) }}</nuxt-link>
                     <br />
-                    <small class="text-muted">{{ project.updated_at }}</small>
+                    <small class="text-muted">{{ project.created_at }}</small>
                   </p>
                 </div>
               </div>
