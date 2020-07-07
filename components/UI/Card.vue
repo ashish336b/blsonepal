@@ -53,7 +53,9 @@
         if(this.cardItem.photos.length > 0) {
           return this.cardItem.photos[0].photo_url;
         }
-        else return '/images/defaults/blog.jpg';
+        else return (this.type==='post') ?
+          '/images/defaults/blog.jpg'
+          : '/images/defaults/project.jpg';
       }
     }
   }
