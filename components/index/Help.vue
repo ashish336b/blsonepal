@@ -6,24 +6,24 @@
           <h1>HOW CAN YOU HELP US?</h1>
           <p
             class="mb-5"
-          >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet interdum erat, a pulvinar nibh sodales ac. Pellentesque quis augue non nunc sagittis rutrum.</p>
+          >In order for us to carry out this valuable work we are in urgent need of donations.</p>
         </div>
 
         <div class="row">
           <div class="col-12 col-md-4">
             <h4 class="mb-3">DONATOR</h4>
-            <p>Lorem ipsum dolor sit amet, risus adipiscing elit. Praesent laoreet condimentum quam, sit amet congue risus lobortis quis.</p>
-            <button class="btn btn-outline-white mt-2">LEARN MORE</button>
-          </div>
-          <div class="col-12 col-md-4">
-            <h4 class="mb-3">FUNDRISING</h4>
-            <p>Lorem ipsum dolor sit amet, risus adipiscing elit. Praesent laoreet condimentum quam, sit amet congue risus lobortis quis.</p>
-            <button class="btn btn-outline-white mt-2">LEARN MORE</button>
+            <p>People like you give what you can to your favorite projects; you feel great when you get updates about how your money is put to work by us.</p>
+            <nuxt-link to="/aboutus" tag="button" class="btn btn-outline-white mt-2">LEARN MORE</nuxt-link>
           </div>
           <div class="col-12 col-md-4">
             <h4 class="mb-3">VOLUNTEER</h4>
-            <p>Lorem ipsum dolor sit amet, risus adipiscing elit. Praesent laoreet condimentum quam, sit amet congue risus lobortis quis.</p>
-            <button class="btn btn-outline-white mt-2">LEARN MORE</button>
+            <p>Be a volunteer and reap the reward: If you want to help the poorest, you are in the right place here. Join our team and let us work together.</p>
+            <nuxt-link to="/aboutus" tag="button" class="btn btn-outline-white mt-2">LEARN MORE</nuxt-link>
+          </div>
+          <div class="col-12 col-md-4">
+            <h4 class="mb-3">ADVOCATE</h4>
+            <p>Defend and speak up on behalf of the vulnerable and suffering! Together, we can intercede on behalf of those who are suffering, without protection.</p>
+            <nuxt-link to="/aboutus" tag="button" class="btn btn-outline-white mt-2">LEARN MORE</nuxt-link>
           </div>
         </div>
       </div>

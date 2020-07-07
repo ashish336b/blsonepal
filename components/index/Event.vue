@@ -71,7 +71,7 @@ export default {
       seconds: 0,
       eventTitle: '',
       eventDateString: '',
-      eventPhoto: 'https://via.placeholder.com/1920x250',
+      eventPhoto: '/images/defaults/event.jpg',
     };
   },
 
@@ -155,7 +155,7 @@ export default {
 @import "@/assets/scss/elements.scss";
 
 .event {
-  background-image: url(https://via.placeholder.com/1920x250);
+  background-image: url(/images/defaults/event.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

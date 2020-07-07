@@ -5,7 +5,7 @@
         <div class="col-12 col-lg-4 mb-5">
           <h5>ABOUT US</h5>
           <hr class="mt-1" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium labore placeat provident recusandae distinctio dolorem natus.</p>
+          <p>Better Life (BLSO) is a social organization based in Nepal, dedicated to bringing help to needy people. BLSO’s operating philosophy is non-political, non-religious and non-governmental.</p>
           <br />
 
           <h5>FOLLOW US</h5>
@@ -35,39 +35,19 @@
         </div>
 
         <div class="col-6 col-lg-2 mb-5">
-          <h5>OUR PROJECT</h5>
+          <h5>OUR PROJECTS</h5>
           <hr class="mt-1" />
           <ul class="list-group">
+            <!-- EMPTY -->
             <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Water Surve
-              </a>
+              <a href="#">Please update with our projects, events and confirm you presence.</a>
             </li>
-            <li>
+            <!-- ELSE -->
+            <!-- <li>
               <a href="#">
                 <i class="las la-angle-right"></i> Education for all
               </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Treatment
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Food Serving
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Cloth
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Selter Project
-              </a>
-            </li>
+            </li>-->
           </ul>
         </div>
 
@@ -76,34 +56,34 @@
           <hr class="mt-1" />
           <ul class="list-group">
             <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Causes
-              </a>
+              <nuxt-link to="/gallery">
+                <i class="las la-angle-right"></i> Children Profile
+              </nuxt-link>
             </li>
             <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Projects
-              </a>
+              <nuxt-link to="/volunteering-projects">
+                <i class="las la-angle-right"></i> Volunteering Projects
+              </nuxt-link>
             </li>
             <li>
-              <a href="#">
+              <nuxt-link to="/upcoming-projects">
+                <i class="las la-angle-right"></i> Upcoming Projects
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/events">
+                <i class="las la-angle-right"></i> Events
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/blogs">
+                <i class="las la-angle-right"></i> Blogs
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/gallery">
                 <i class="las la-angle-right"></i> Gallery
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Terms of use
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Legal disclaimer
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Privacy policy
-              </a>
+              </nuxt-link>
             </li>
           </ul>
         </div>

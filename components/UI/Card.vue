@@ -53,7 +53,7 @@
         if(this.cardItem.photos.length > 0) {
           return this.cardItem.photos[0].photo_url;
         }
-        else return 'https://via.placeholder.com/370x200';
+        else return '/images/defaults/blog.jpg';
       }
     }
   }

@@ -7,10 +7,7 @@
           <span>BLOG</span>
         </h1>
         <Separator />
-        <p class="mb-5">
-          We create events aiming to spear the voice for children and gather for
-          support Please update with our events
-        </p>
+        <p class="mb-5">Our post helps you keep up with what good deeds we are doing.</p>
 
         <div class="row">
           <div class="col-12 col-sm-6 col-lg-4 text-left"

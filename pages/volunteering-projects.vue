@@ -56,14 +56,14 @@
                 <div class="row">
                   <div class="col-12 col-lg-6 pl-0">
                     <p class="text-justify">
-                      Girl trafficking awareness program is a public awareness volunteer program design to stop the (human trafficking) Girl/Women trafficking. Organization runs awareness program in against of girl trafficking in Nepal. Girl trafficking, abduction and trafficking of children are great problem in our Nepali society which is restless by illiterate, lack and poverty.
+                      Our Organization runs mindfulness programs against girl trafficking in Nepal. Trafficking, kidnapping are extraordinary issues in our Nepali society which is fretful by the absence of education. Massage parlors and sex houses are empowering Girl Trafficking. Such a way, abductors agents are snatching or instigating youngsters and handing them over for abduction, engaging them as child labour in various factories and selling for organ transplant.
                       <br />
-                      <br />Brothels and sex houses are encouraging girl trafficking. Such a way, abductors brokers are abducting or inducing children and handing over for adoption, engaging them as child labour in various factories and selling for organ transplant. Yearly, about 5 to 7 thousand Nepali women are being sold in brothels as sex worker. Such a way, about 2 hundred thousand Nepali women are being compelled by operating sex business in various brothels of India. More women to be sold from Nepal are in India. After opening opportunity of employment in Gulf countries, more Nepalese girls are working as sex worker in brothels in these countries. Brokers supplying Nepali women by taking huge amount as commission from foreign brothel by advertising that they would get employment at free of cost.
+                      <br />Yearly, around 5 to 7 thousand Nepali ladies are being sold in massage parlors as sex specialist. Moreover, around 2 hundred thousand Nepali ladies are being constrained by working sex business in different houses of ill-repute of India. Specialists flexibly Nepali ladies by accepting tremendous sums as commission from outside the brothel by promoting that they would get work liberated from cost. Because of open outskirt and frail law, step by step different occurrences of human dealing and kidnapping are expanding in Nepal. Particularly more young ladies over 9 years to 16 years young ladies are being sold and less young ladies over 16 years are being sold each year.
                     </p>
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(https://via.placeholder.com/435x431)"
+                      style="background-image: url(/images/causes/humanTrafficking.jpg)"
                       class="image-holder"
                     />
                   </div>
@@ -73,15 +73,11 @@
               <br />
 
               <p class="text-justify">
-                Girl trafficking awareness program is a public awareness volunteer program design to stop the (human trafficking) Girl/Women trafficking. Organization runs awareness program in against of girl trafficking in Nepal. Girl trafficking, abduction and trafficking of children are great problem in our Nepali society which is restless by illiterate, lack and poverty.
+                Because of unskilled, strict notion, absence of independence, the Nepali young ladies are being constrained to follow a specialist spouse after the marriage. Having any desire for delight and visiting city, the representatives use them as sex slave and sell them proprietor of houses of ill-repute. Girls tormented intellectually and truly and battered and got occupied with prostitution. In the wake of realizing that she is influenced by HIV, they ousted her from the house of ill-repute. A few ladies ousted from the massage parlor return in the local nation and some hang tight for the client in the red-light region. Society loathes and rejects them, in this manner, their conditions are discovered horrendous.
                 <br />
-                <br />Brothels and sex houses are encouraging girl trafficking. Such a way, abductors brokers are abducting or inducing children and handing over for adoption, engaging them as child labour in various factories and selling for organ transplant. Yearly, about 5 to 7 thousand Nepali women are being sold in brothels as sex worker. Such a way, about 2 hundred thousand Nepali women are being compelled by operating sex business in various brothels of India. More women to be sold from Nepal are in India. After opening opportunity of employment in Gulf countries, more Nepalese girls are working as sex worker in brothels in these countries. Brokers supplying Nepali women by taking huge amount as commission from foreign brothel by advertising that they would get employment at free of cost.
+                <br />Along these lines, our association has been working mindfulness and instructive projects in the regions where young ladies are dealt in enormous numbers. We are working projects to safeguard the young ladies from houses of ill-repute, young ladies from the fringe who are being offered to massage parlors and fitting consideration to the individuals who are returned by influencing HIV and mindfulness programs in the general public not to loathe and affront them. We have arranged a chipping in program to protect sold and to be sold young ladies, recover and make accessible aptitude preparing and information to the HIV influenced lady. Along these lines, we solicitation to partake in salvage of sold and to be sold young lady, recovery, social mindfulness crusade and volunteer program against human dealing.
                 <br />
-                <br />Due to open border and weak law, day by day various incidents of human trafficking and abduction are increasing in Nepal. As per the data, the districts from where more and more women are being sold i.e. Sindhupalchok, Makawanpur, Dhading, Kavre, Rasuwa, Dang, Kailali, Siraha, Saptari and Udayapur. Especially more girls above 9 years to 16 years girls are being sold and less girls above 16 years are being sold every year. The girl seller brokers are selling daughters of straight, illiterate family by marrying, in the pretext of good job and giving other greed in brothels of Delhi and Mumbai.
-                <br />
-                <br />Due to illiterate, religious superstition, lack of self reliant, the Nepali girls are being compelled to follow broker husband after the marriage. Having hope of pleasure and visiting city, the brokers use them as sex slave and sell them owner of brothels. Such a way prostitute girl should satisfy 15 to 20 customers per day having sex with them. If she rejects to have sex with any customer or customer does not satisfy with her, they tortured mentally and physically and battered and got engaged in prostitution. After knowing that she is affected by HIV, they banished from the brothel. Some women banished from the brothel return in native country and some wait for the customer in red-light area. The society hates and rejected such returned women, thus, their conditions found terrible. Therefore, our organization has been operating awareness and educative programs in the districts where girls are trafficked in large numbers. We are operating programs to rescue the girls from brothels, girls from boarder who are being sold to brothels and appropriate care to those who are returned by affecting from HIV and awareness program in the society not to hate and insult them. We have prepared volunteering program to rescue sold and to be sold girls, rehabilitation and make available skill training and knowledge to the HIV affected woman.
-                <br />
-                <br />Therefore, we request to participate in rescue of sold and to be sold girl, rehabilitation, social awareness campaign and volunteer program against human trafficking. Therefore, we invite entire volunteers of the world to donate and contribute your effort in society; let’s join our Girl/Women trafficking volunteer project.
+                <br />In this way, we welcome whole volunteers of the world to give and contribute your exertion in the public arena; we should join our Girl/Women dealing volunteer venture.
               </p>
               <!--  -->
             </div>
@@ -111,7 +107,7 @@
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(https://via.placeholder.com/435x431)"
+                      style="background-image: url(/images/causes/education.jpg)"
                       class="image-holder"
                     />
                   </div>
@@ -164,7 +160,7 @@
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(https://via.placeholder.com/435x431)"
+                      style="background-image: url(/images/causes/cause003.jpg)"
                       class="image-holder"
                     />
                   </div>

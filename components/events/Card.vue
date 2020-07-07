@@ -2,7 +2,7 @@
   <div class="row mb-5">
     <div class="col-12 col-md-5 mb-4">
       <div class="image"
-      :style="event.photos[0] ? `background-image:url(${event.photos[0].photo_url})` : `background-image:url('https://via.placeholder.com/370x250')`">
+      :style="event.photos[0] ? `background-image:url(${event.photos[0].photo_url})` : `background-image:url('/images/defaults/event.jpg')`">
         <div class="date d-flex align-items-center justify-content-center">
           <h6 class="text-white mb-0">{{ event.date_string }}</h6>
         </div>

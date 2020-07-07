@@ -7,10 +7,7 @@
           <span>VOLUNTEERS</span>
         </h1>
         <Separator />
-        <p class="mb-5">
-          We create events aiming to pear to the voice for children and gather for support.
-          Please update with our events and confirm you presence.
-        </p>
+        <p class="mb-5">BLSO prides itself on empowering the most marginalised communities of Nepal.</p>
 
         <div class="row">
           <div
