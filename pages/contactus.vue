@@ -9,10 +9,7 @@
             <span>TOUCH</span>
           </h1>
           <Separator />
-          <p>
-            We create events aiming to pear to the voice for children and gather for support.
-            Please update with our events and confirm you presence.
-          </p>
+          <p>Go for it, don’t hesitate to contact us for donation, volunteering project.</p>
         </div>
       </div>
       <Cards />
