@@ -18,7 +18,7 @@
               <div class="card is-radiusless is-borderless">
                 <!-- 370x200 -->
                 <img
-                  :src="`/images/causes/cause00${i}.jpg`"
+                  :src="causes[i - 1].image"
                   class="card-img-top is-radiusless is-borderless"
                   alt
                 />
@@ -66,19 +66,19 @@ export default {
           title: "Education For Children",
           description:
             "Every last child deserves the opportunity to learn. BLSO Nepal works every day to ensure all children have the best chance to learn.",
-          image: "/images/causes/cause001.jpg"
+          image: "/images/causes/education.jpg"
         },
         {
           title: "Health For All",
           description:
             "Our Volunteers raise awareness by demonstrating related activities among rural people about health and hygiene.",
-          image: "/images/causes/cause002.jpg"
+          image: "/images/causes/cause003.jpg"
         },
         {
           title: "Preventing Human Trafficking",
           description:
             "Help Draft laws and create comprehensive national anti-trafficking strategies, also assisting with resources to implement them.",
-          image: "/images/causes/cause003.jpg"
+          image: "/images/causes/humanTrafficking.jpg"
         }
       ]
     };

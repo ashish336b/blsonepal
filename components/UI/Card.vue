@@ -7,7 +7,7 @@
       </div>
       <div
         class="card-img-top is-radiusless"
-        :style="`background-image: url(https://via.placeholder.com/370x200)`"
+        :style="`background-image: url(/images/defaults/blog.jpg)`"
       />
     </div>
 

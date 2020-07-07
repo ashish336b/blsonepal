@@ -35,39 +35,19 @@
         </div>
 
         <div class="col-6 col-lg-2 mb-5">
-          <h5>OUR PROJECT</h5>
+          <h5>OUR PROJECTS</h5>
           <hr class="mt-1" />
           <ul class="list-group">
+            <!-- EMPTY -->
             <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Water Surve
-              </a>
+              <a href="#">Please update with our projects, events and confirm you presence.</a>
             </li>
-            <li>
+            <!-- ELSE -->
+            <!-- <li>
               <a href="#">
                 <i class="las la-angle-right"></i> Education for all
               </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Treatment
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Food Serving
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Cloth
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="las la-angle-right"></i> Selter Project
-              </a>
-            </li>
+            </li>-->
           </ul>
         </div>
 

@@ -19,26 +19,28 @@
 
           <br />
           <br />Welcome friends and supporters of Better Life Social Organization (BLSO Nepal). Here you can get familiar with our social services, the advancement we are making, and how you can contribute.
-          <br />
-          <br />Our administration is focused on the underestimated and most destitute communities in Nepal. We also help struggling farmers and their families. Our organization obtains nutritional supplements for women and children. We connect education sponsors with children. We support English language learning in our communities and provide health care services for families. We work to sustain agricultural development, and improve the welfare of our community's orphans. Our mission is to improve the quality of life for the marginalized, suffering, and destitute people of Nepal's poorest communities, with an emphasis on securing the rights of women and children. Through an enhanced educational program, community training and agricultural improvements, the economic well-being and basic human rights are more easily attained and protected for the neediest of families.
         </p>
       </div>
-      <div class="col-12 col-lg-6 px-3">
-        <div
+      <div
+        class="col-12 col-lg-6 px-3 text-center py-5 d-flex align-items-center justify-content-center"
+      >
+        <!-- <div
           class="image-holder"
           :style="`background-image: url(http://via.placeholder.com/476x431)`"
-        ></div>
+        ></div>-->
+        <img src="/images/logo.jpg" class="img-fluid" />
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-2">
       <div class="col-12">
         <p class="text-justify">
-          Better Life Social Organization, Nepal is a non-religious, non-political, NPO founded in 2011 by a group of development workers, educators, social activists and other professionals. We are officially registered as an NPO under the Society Act with the District Administration Office in Kathmandu (Reg. No. 723). We are affiliated with the Social Welfare Council of Nepal (SWC) (Affiliation No. 34389).
+          Our administration is focused on the underestimated and most destitute communities in Nepal. We also help struggling farmers and their families. Our organization obtains nutritional supplements for women and children. We connect education sponsors with children. We support English language learning in our communities and provide health care services for families. We work to sustain agricultural development, and improve the welfare of our community's orphans. Our mission is to improve the quality of life for the marginalized, suffering, and destitute people of Nepal's poorest communities, with an emphasis on securing the rights of women and children. Through an enhanced educational program, community training and agricultural improvements, the economic well-being and basic human rights are more easily attained and protected for the neediest of families.
+          <br />Better Life Social Organization, Nepal is a non-religious, non-political, NPO founded in 2011 by a group of development workers, educators, social activists and other professionals. We are officially registered as an NPO under the Society Act with the District Administration Office in Kathmandu (Reg. No. 723). We are affiliated with the Social Welfare Council of Nepal (SWC) (Affiliation No. 34389).
           <br />
           <br />Better Life Social Organization has as its focus community-based projects and brings local and international volunteers together in Nepal. Our aims are to provide the underserved in our communities with the knowledge, tools and support they need in their daily lives. Our efforts are focused on educating women and children. The community as a whole benefits from training and service projects. Agricultural development programs help farmers with modern technology and training for improved crop production. Better Life has adopted an integrated community approach with its development. It combines volunteer work, donations, ideas, and feedback from both local and international volunteers and supporters.
         </p>
         <br />
-        <button class="btn btn-outline-info mb-5">BECOME A VOLUNTEER</button>
+        <nuxt-link to="/contactus" tag="button" class="btn btn-outline-info mb-5">BECOME A VOLUNTEER</nuxt-link>
       </div>
     </div>
 

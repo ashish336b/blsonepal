@@ -1,7 +1,7 @@
 <template>
   <div class="row mb-5">
     <div class="col-12 col-md-5 mb-4">
-      <div class="image" style="background-image:url(https://via.placeholder.com/370x250)">
+      <div class="image" style="background-image:url(/images/defaults/event.jpg)">
         <div class="date d-flex align-items-center justify-content-center">
           <h6 class="text-white mb-0">24 MAY, 2020</h6>
         </div>

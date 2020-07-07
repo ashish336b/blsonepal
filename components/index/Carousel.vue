@@ -18,8 +18,18 @@
                 class="lead"
               >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
               <br />
-              <a class="btn btn-outline-white mr-2" href="#" role="button">DONATE NOW</a>
-              <a class="btn btn-outline-white" href="#" role="button">LEARN MORE</a>
+              <nuxt-link
+                to="/donate"
+                class="btn btn-outline-white mr-2"
+                href="#"
+                role="button"
+              >DONATE NOW</nuxt-link>
+              <nuxt-link
+                to="/aboutus"
+                class="btn btn-outline-white"
+                href="#"
+                role="button"
+              >LEARN MORE</nuxt-link>
             </div>
           </div>
         </div>
@@ -36,8 +46,18 @@
                 class="lead"
               >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
               <br />
-              <a class="btn btn-outline-white mr-2" href="#" role="button">DONATE NOW</a>
-              <a class="btn btn-outline-white" href="#" role="button">LEARN MORE</a>
+              <nuxt-link
+                to="/donate"
+                class="btn btn-outline-white mr-2"
+                href="#"
+                role="button"
+              >DONATE NOW</nuxt-link>
+              <nuxt-link
+                to="/aboutus"
+                class="btn btn-outline-white"
+                href="#"
+                role="button"
+              >LEARN MORE</nuxt-link>
             </div>
           </div>
         </div>
@@ -54,8 +74,18 @@
                 class="lead"
               >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
               <br />
-              <a class="btn btn-outline-white mr-2" href="#" role="button">DONATE NOW</a>
-              <a class="btn btn-outline-white" href="#" role="button">LEARN MORE</a>
+              <nuxt-link
+                to="/donate"
+                class="btn btn-outline-white mr-2"
+                href="#"
+                role="button"
+              >DONATE NOW</nuxt-link>
+              <nuxt-link
+                to="/aboutus"
+                class="btn btn-outline-white"
+                href="#"
+                role="button"
+              >LEARN MORE</nuxt-link>
             </div>
           </div>
         </div>

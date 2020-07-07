@@ -63,7 +63,7 @@
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(https://via.placeholder.com/435x431)"
+                      style="background-image: url(/images/causes/humanTrafficking.jpg)"
                       class="image-holder"
                     />
                   </div>
@@ -107,7 +107,7 @@
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(https://via.placeholder.com/435x431)"
+                      style="background-image: url(/images/causes/education.jpg)"
                       class="image-holder"
                     />
                   </div>
@@ -160,7 +160,7 @@
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(https://via.placeholder.com/435x431)"
+                      style="background-image: url(/images/causes/cause003.jpg)"
                       class="image-holder"
                     />
                   </div>
