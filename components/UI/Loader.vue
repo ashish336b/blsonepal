@@ -7,7 +7,9 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/assets/scss/colors.scss";
+
 .lds {
   width: 100vw;
   height: 100vh;
@@ -17,7 +19,8 @@
   bottom: 0;
   right: 0;
   z-index: 1026;
-  background-color: #0aaaa0;
+  /* background-color: #0aaaa0; */
+  background-color: $primary;
 }
 
 .lds-ripple {

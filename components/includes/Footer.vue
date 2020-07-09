@@ -5,7 +5,7 @@
         <div class="col-12 col-lg-4 mb-5">
           <h5>ABOUT US</h5>
           <hr class="mt-1" />
-          <p>Better Life (BLSO) is a social organization based in Nepal, dedicated to bringing help to needy people. BLSO’s operating philosophy is non-political, non-religious and non-governmental.</p>
+          <p>Better Life Social Organization, BLSO Nepal is a non-profit, non-religious and non-political organization which was founded in 2011. We are the registered NGO under the Society Act of District Administration Office, Kathmandu (Reg. No. 723).</p>
           <br />
 
           <h5>FOLLOW US</h5>
@@ -51,7 +51,7 @@
           </ul>
         </div>
 
-        <div class="col-6 col-lg-2 mb-5">
+        <div class="col-6 col-lg-3 mb-5">
           <h5>QUICK LINKS</h5>
           <hr class="mt-1" />
           <ul class="list-group">
@@ -88,23 +88,28 @@
           </ul>
         </div>
 
-        <div class="col-12 col-lg-4 mb-5">
+        <div class="col-12 col-lg-3 mb-5 contact">
           <h5>CONTACT US</h5>
           <hr class="mt-1" />
           <ul class="list-group">
             <li>
-              Phone :
+              <i class="las la-phone"></i>
+              <a href="tel:+977015185419">+977 01 5185419</a>,
+            </li>
+            <li class="mb-3 ml-4">
               <a href="tel:+9779851091049">+977 98510 91049</a>
             </li>
+
             <li>
-              Phone :
-              <a href="tel:+977015185419">+977 01 5185419</a>
+              <i class="las la-envelope"></i>
+              <a href="mailto:info@blsonepal.com">info@blsonepal.com</a>,
+            </li>
+            <li class="mb-3 ml-4">
+              <a href="mailto:blsonepal@gmail.com">blsonepal@gmail.com</a>
             </li>
             <li>
-              Email :
-              <a href="#">blsonepal@gmail.com</a>
+              <i class="las la-map-marked"></i> P.O. Box #3547, Kusunti -13, Lalitpur, Nepal
             </li>
-            <li>Address : Kusunti -13, Lalitpur, Nepal</li>
           </ul>
         </div>
       </div>
@@ -158,6 +163,13 @@ li {
   background-color: $darker;
   i {
     color: #ff0000;
+  }
+}
+
+.contact {
+  i {
+    font-size: 20px;
+    color: $primary;
   }
 }
 </style>

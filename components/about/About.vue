@@ -12,13 +12,23 @@
         <p class="text-justify">
           <b>
             <i>
-              Better Life (BLSO) is a social organization based in Nepal, dedicated to bringing help to needy
-              people. BLSO’s operating philosophy is non-political, non-religious and non-governmental.
+              Better Life Social Organization, BLSO Nepal is a non-profit, non-religious
+              and non-political organization which was founded in 2011. We are the
+              registered NGO under the Society Act of District Administration Office,
+              Kathmandu (Reg. No. 723). We are affiliated with the Social Welfare
+              Council of Nepal (SWC) (Affiliation No. 34389).
             </i>
           </b>
 
           <br />
-          <br />Welcome friends and supporters of Better Life Social Organization (BLSO Nepal). Here you can get familiar with our social services, the advancement we are making, and how you can contribute.
+          <br />BLSO Nepal focuses on
+          development of community people who are expecting the support to raise
+          their life standard. We conduct the projects which are related with
+          agriculture, education, health and more. This organization has targeted to
+          bring local and international volunteers together to support the society
+          where many people are looking to be created opportunities for them with
+          being competitive growing chances increasing their earnings to fight with
+          their hard life.
         </p>
       </div>
       <div
@@ -34,10 +44,21 @@
     <div class="row mt-2">
       <div class="col-12">
         <p class="text-justify">
-          Our administration is focused on the underestimated and most destitute communities in Nepal. We also help struggling farmers and their families. Our organization obtains nutritional supplements for women and children. We connect education sponsors with children. We support English language learning in our communities and provide health care services for families. We work to sustain agricultural development, and improve the welfare of our community's orphans. Our mission is to improve the quality of life for the marginalized, suffering, and destitute people of Nepal's poorest communities, with an emphasis on securing the rights of women and children. Through an enhanced educational program, community training and agricultural improvements, the economic well-being and basic human rights are more easily attained and protected for the neediest of families.
-          <br />Better Life Social Organization, Nepal is a non-religious, non-political, NPO founded in 2011 by a group of development workers, educators, social activists and other professionals. We are officially registered as an NPO under the Society Act with the District Administration Office in Kathmandu (Reg. No. 723). We are affiliated with the Social Welfare Council of Nepal (SWC) (Affiliation No. 34389).
-          <br />
-          <br />Better Life Social Organization has as its focus community-based projects and brings local and international volunteers together in Nepal. Our aims are to provide the underserved in our communities with the knowledge, tools and support they need in their daily lives. Our efforts are focused on educating women and children. The community as a whole benefits from training and service projects. Agricultural development programs help farmers with modern technology and training for improved crop production. Better Life has adopted an integrated community approach with its development. It combines volunteer work, donations, ideas, and feedback from both local and international volunteers and supporters.
+          In present situation in Nepal, there is necessary to be focused on national
+          development with creating the ways of self sustaining environment in every
+          level of poor class people. We want to bring hope of survival on those
+          people who are seeing everywhere darkness because of hopelessness so
+          that they could feel about the right of survival is for them also. These
+          opportunities could be established for these people is possible after only
+          we became friend on their troubles and difficulties go ahead with shaking
+          hands or being helping hands for them. We became human when we will be
+          able to create feelings of humanity. In this Twenty First Century even
+          people fight for two times then what can they think for new or to be
+          progressive so we have planned to make them out from thinking for what
+          to eat or how to pay for education or how to make more earning in
+          agriculture field with a very easy way. In reality, life is struggle even though
+          there should be the value of struggle, the same condition BLSO Nepal
+          wants to create in overall.
         </p>
         <br />
         <nuxt-link to="/contactus" tag="button" class="btn btn-outline-info mb-5">BECOME A VOLUNTEER</nuxt-link>

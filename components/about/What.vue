@@ -35,6 +35,18 @@
         <h5 class="text-white">PREVENT HUMAN TRAFFICKING</h5>
       </div>
     </div>
+
+    <p
+      class="mt-5"
+    >We have conducted many programs through our organization and are proud of our achievements. Our achievements to date include:</p>
+    <ul>
+      <li>Distributing clothes, shoes, school bags, school dresses, stationery, toiletries including toothpaste, soaps and other daily necessities.</li>
+      <li>Building a team of supporters to make education accessible for the children.</li>
+      <li>Providing job training.</li>
+      <li>Establishing an awareness program on cleanliness and proper hygiene.</li>
+      <li>Supporting agriculture by providing seeds to the farmers.</li>
+      <li>Providing financial assistance for medical check-ups and medicines.</li>
+    </ul>
   </div>
 </template>
 
@@ -63,5 +75,9 @@ export default {
     display: table-cell;
     vertical-align: middle;
   }
+}
+
+ul {
+  list-style-type: square;
 }
 </style>

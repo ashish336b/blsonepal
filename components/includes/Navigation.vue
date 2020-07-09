@@ -67,14 +67,16 @@
               >Contact Us</nuxt-link>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline mt-n2">
             <!-- <button class="btn btn-outline-success my-2 my-sm-0 is-radiusless" type="submit">DONATE</button> -->
-            <nuxt-link
+            <!-- <nuxt-link
               tag="button"
               to="/donate"
-              class="btn btn-outline-success my-2 my-sm-0 is-radiusless"
+              class="btn btn-outline-success my-2 my-sm-0 is-radiusless learn-more"
               type="submit"
-            >DONATE</nuxt-link>
+            >DONATE</nuxt-link>-->
+
+            <nuxt-link tag="button" to="/donate" class="btn learn-more" type="submit">DONATE</nuxt-link>
           </form>
         </div>
       </nav>
@@ -89,7 +91,7 @@
   margin-right: 64px;
   .nav-item {
     .nav-link {
-      font-weight: 500;
+      font-weight: 600;
       font-family: "Raleway", sans-serif;
       border-bottom: 2px solid #fff;
       &:hover {
@@ -143,5 +145,71 @@
 
 .dropdown-menu.show {
   animation: slideUp 500ms;
+}
+
+//
+
+$bg: #fff;
+$text: #382b22;
+$light-pink: #fff0f0;
+$pink: #ffe9e9;
+$dark-pink: #f9c4d2;
+$pink-border: #b18597;
+$pink-shadow: #ffe3e2;
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  &.learn-more {
+    font-weight: 600;
+    color: $text;
+    text-transform: uppercase;
+    padding: 8px;
+    background: $light-pink;
+    border: 2px solid $pink-border;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      background 150ms cubic-bezier(0, 0, 0.58, 1);
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $dark-pink;
+      border-radius: inherit;
+      box-shadow: 0 0 0 2px $pink-border, 0 0.625em 0 0 $pink-shadow;
+      transform: translate3d(0, 0.75em, -1em);
+      transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+        box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    }
+    &:hover {
+      background: $pink;
+      transform: translate(0, 0.25em);
+      &::before {
+        box-shadow: 0 0 0 2px $pink-border, 0 0.5em 0 0 $pink-shadow;
+        transform: translate3d(0, 0.5em, -1em);
+      }
+    }
+    &:active {
+      background: $pink;
+      transform: translate(0em, 0.75em);
+      &::before {
+        box-shadow: 0 0 0 2px $pink-border, 0 0 $pink-shadow;
+        transform: translate3d(0, 0, -1em);
+      }
+    }
+  }
 }
 </style>
