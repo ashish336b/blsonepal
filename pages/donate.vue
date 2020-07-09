@@ -127,7 +127,7 @@
                   <br />
                   <input
                     class="form-control is-radiusless py-4 mb-4"
-                    type="number"
+                    type="text"
                     v-model="phone"
                     :class="errors.get('phone') ? 'is-invalid' : ''"
                     placeholder="Ex. +977 9851091049"
