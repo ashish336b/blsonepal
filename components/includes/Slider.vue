@@ -74,7 +74,7 @@
         exact-active-class="nuxt-active"
       >
         <span>
-          <i class="las la-newspaper"></i> EVENTS
+          <i class="las la-newspaper"></i> NEWS &amp; EVENTS
         </span>
       </nuxt-link>
       <nuxt-link
@@ -109,7 +109,7 @@
       </nuxt-link>
       <li class="py-3"></li>
       <nuxt-link to="/donate" tag="li" class="list-group-item pl-4 pb-4">
-        <button class="btn btn-success is-radiusless">Donate</button>
+        <button class="btn btn-lg btn-danger my-2 my-sm-0 font-weight-bold">DONATE</button>
       </nuxt-link>
       <li class="py-3"></li>
     </ul>
@@ -129,6 +129,7 @@ aside {
   &::-webkit-scrollbar {
     display: none !important;
   }
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -180,5 +181,7 @@ ul {
     width: 35vw;
   }
 }
+
+//
 </style>
 

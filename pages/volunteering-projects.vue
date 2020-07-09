@@ -33,6 +33,15 @@
                 aria-controls="nav-health"
                 aria-selected="false"
               >Health</a>
+              <a
+                class="nav-item nav-link"
+                id="nav-agriculture-tab"
+                data-toggle="tab"
+                href="#nav-agriculture"
+                role="tab"
+                aria-controls="nav-agriculture"
+                aria-selected="false"
+              >Agriculture</a>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
@@ -167,11 +176,60 @@
                 </div>
               </div>
               <br />
+            </div>
 
-              <!-- <p
-                class="text-justify"
-              ></p>-->
+            <!--  -->
+
+            <div
+              class="tab-pane fade mt-5 pt-2"
+              id="nav-agriculture"
+              role="tabpanel"
+              aria-labelledby="nav-agriculture-tab"
+            >
               <!--  -->
+              <div class="text-center">
+                <h2>
+                  <span>AGRICULTURE</span>
+                </h2>
+                <Separator />
+                <br />
+              </div>
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 col-lg-6 pl-0">
+                    <p class="text-justify">
+                      Exchange of giving and taking knowledge makes benefitted to both sides
+                      to learn new things. Volunteering opportunity brings the situation of
+                      unification, sharing and understanding.
+                    </p>
+
+                    <p class="text-justify">
+                      Nepal is an agricultural country and
+                      here are many opportunities to experiment new ideas and knowledge whatever and whoever learned. BLSO Nepal would be the mediator to
+                      arrange the chances for Agriculture Volunteering. After growing the threat of
+                      CoronaVirus (Covid 19), Nepalese Government also is giving priority to
+                      grow the investment and involvement of the Nepalese citizens to step
+                      towards the agricultural system in Nepal.
+                      <br />
+                      <br />The farmers of Nepal are looking for the way for how to make boom to the
+                      agricultural system. Volunteering involvement with sharing the methods
+                      and direct sighting will be productive joining with the farmers in the fields.
+                      Volunteers could enjoy to work and share in organic farm about farming
+                      techniques of Nepal with friendly farmers. Agriculture volunteering creates
+                      opportunity to fulfill the tasks of bedding, planting, maintaining, weeding,
+                      harvesting and more other related things.
+                    </p>
+                  </div>
+                  <div class="col-12 col-lg-6 px-0 py-2">
+                    <div
+                      style="background-image: url(/images/causes/cause003.jpg)"
+                      class="image-holder"
+                    />
+                  </div>
+                </div>
+              </div>
+              <br />
             </div>
           </div>
         </div>
@@ -225,5 +283,12 @@ a {
 
 ul {
   list-style-type: square;
+}
+
+@media screen and(max-width: 767px) {
+  .nav-item {
+    flex: auto !important;
+    width: 50%;
+  }
 }
 </style>

@@ -7,8 +7,8 @@
         </h1>
         <h4 class="mb-3">ADDRESS</h4>
         <p>
-          Kusunti -13,
-          <br />Lalitpur, Nepal
+          P.O. Box #3547,
+          <br />Kusunti -13, Lalitpur, Nepal
         </p>
       </div>
     </div>
@@ -19,9 +19,9 @@
         </h1>
         <h4 class="mb-3">CALL US</h4>
         <p>
-          <a href="tel:+977 98510 91049">+977 98510 91049</a>
-          <br />
           <a href="tel:+977 01 5185419">+977 01 5185419</a>
+          <br />
+          <a href="tel:+977 98510 91049">+977 98510 91049</a>
         </p>
       </div>
     </div>
@@ -32,7 +32,7 @@
         </h1>
         <h4 class="mb-3">EMAIL US</h4>
         <p>
-          <a href="mailto:blsonepal@gmail.com">blsonepal@gmail.com</a>
+          <a href="mailto:info@blsonepal.com">info@blsonepal.com</a>
           <br />
           <a href="mailto:blsonepal@gmail.com">blsonepal@gmail.com</a>
         </p>
