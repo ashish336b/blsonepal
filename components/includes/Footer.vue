@@ -72,7 +72,7 @@
             </li>
             <li>
               <nuxt-link to="/events">
-                <i class="las la-angle-right"></i> Events
+                <i class="las la-angle-right"></i> News &amp; Events
               </nuxt-link>
             </li>
             <li>

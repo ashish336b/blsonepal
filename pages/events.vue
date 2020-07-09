@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Cover image="http://via.placeholder.com/1920x350" current="Events" />
+    <Cover image="http://via.placeholder.com/1920x350" current="News & Events" />
     <div class="container py-5 my-5">
       <Card v-for="i in 6" :key="i" />
 
