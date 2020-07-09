@@ -33,8 +33,8 @@
           <input
             class="form-control is-radiusless py-4 mb-4"
             :class="errors.get('phone') ? 'is-invalid': ''"
-            type="number"
-            placeholder="Your Phone"
+            type="text"
+            placeholder="Your Phone (Eg: +977 9851091049)"
             v-model="phone"
           />
           <div class="invalid-feedback">{{ errors.get('phone') }}</div>
