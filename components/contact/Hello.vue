@@ -70,7 +70,7 @@
               Send your Message
             </div>
           </button>
-          <button class="btn px-4 py-2 btn-outline-darker font-weight-bold">Reset</button>
+          <button class="btn px-4 py-2 btn-outline-darker font-weight-bold" @click="resetForm">Reset</button>
         </div>
       </div>
     </div>
