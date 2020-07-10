@@ -223,7 +223,7 @@
                   </div>
                   <div class="col-12 col-lg-6 px-0 py-2">
                     <div
-                      style="background-image: url(/images/causes/cause003.jpg)"
+                      style="background-image: url(/images/causes/agriculture.jpg)"
                       class="image-holder"
                     />
                   </div>
