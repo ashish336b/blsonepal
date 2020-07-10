@@ -7,7 +7,7 @@
     <Volunteers />
     <Event />
     <Blogs />
-    <Sponsors />
+    <!-- <Sponsors /> -->
   </div>
 </template>
 
