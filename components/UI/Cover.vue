@@ -19,6 +19,10 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
+
+h1 {
+  color: #fff;
+}
 .cover {
   background-position: center;
   background-size: cover;

@@ -33,8 +33,15 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
+h1 {
+  color: #fff;
+}
+
+h2 {
+  color: $dark;
+}
 section {
-  background-image: url(http://via.placeholder.com/1920x650);
+  background-image: url("/images/error.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;

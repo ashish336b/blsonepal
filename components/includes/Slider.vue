@@ -109,8 +109,11 @@
       </nuxt-link>
       <li class="py-3"></li>
       <nuxt-link to="/donate" tag="li" class="list-group-item pl-4 pb-4">
-        <button class="btn btn-lg btn-danger my-2 my-sm-0 font-weight-bold">DONATE</button>
+        <div class="donate">
+          <button class="btn btn-lg btn-danger font-weight-bold">DONATE</button>
+        </div>
       </nuxt-link>
+
       <li class="py-3"></li>
     </ul>
   </aside>
@@ -182,6 +185,15 @@ ul {
   }
 }
 
-//
+.donate {
+  max-width: min-content;
+  border: solid 2px red;
+  border-radius: 8px;
+  padding: 2px;
+  .btn {
+    padding: 4px 16px;
+    margin: 0 !important;
+  }
+}
 </style>
 

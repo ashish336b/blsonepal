@@ -72,12 +72,14 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-2">
-            <nuxt-link
-              tag="button"
-              to="/donate"
-              class="btn btn-lg btn-danger my-2 my-sm-0 font-weight-bold"
-              type="submit"
-            >DONATE</nuxt-link>
+            <div>
+              <nuxt-link
+                tag="button"
+                to="/donate"
+                class="btn btn-lg btn-danger my-2 my-sm-0 font-weight-bold"
+                type="submit"
+              >DONATE</nuxt-link>
+            </div>
           </form>
         </div>
       </nav>
@@ -159,6 +161,17 @@
   .nav-item {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+  }
+}
+
+form {
+  div {
+    border: solid 2px red;
+    border-radius: 8px;
+    padding: 2px;
+    .btn {
+      padding: 4px 8px;
+    }
   }
 }
 </style>
