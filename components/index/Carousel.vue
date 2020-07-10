@@ -59,6 +59,10 @@ i {
   font-size: 32px;
 }
 
+h1 {
+  color: #fff;
+}
+
 .carousel-item {
   width: 100vw;
   height: 512px;

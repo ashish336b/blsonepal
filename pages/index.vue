@@ -7,7 +7,7 @@
     <Volunteers />
     <Event />
     <Blogs :latestPosts="latestPosts"/>
-    <Sponsors />
+    <!-- <Sponsors /> -->
   </div>
 </template>
 

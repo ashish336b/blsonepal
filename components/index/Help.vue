@@ -45,6 +45,10 @@ section {
   color: #fff;
 }
 
+h1 {
+  color: #fff;
+}
+
 .bg-transparent-darker {
   background-color: rgba(0, 0, 0, 0.8);
 }
