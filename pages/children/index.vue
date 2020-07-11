@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Cover image="http://via.placeholder.com/1920x350" current="Children Profile" />
+    <Cover image="" current="Children Profile" />
     <div class="container py-5 my-5">
       <Card
         v-for="(child,index) in children"

@@ -6,7 +6,7 @@
           <div class="col-12 col-lg-4 text-white d-flex mb-5">
             <i class="las la-calendar"></i>
             <div class="ml-3">
-              <h3>Up comming event</h3>
+              <h3>{{ heading }}</h3>
               <h5 class="text-uppercase">
                 {{ (eventTitle === '') ? 'No Events' : eventTitle }}
               </h5>
@@ -69,6 +69,7 @@ export default {
       hours: 0,
       minutes: 0,
       seconds: 0,
+      heading: 'Up comming event',
       eventTitle: '',
       eventDateString: '',
       eventPhoto: '/images/defaults/event.jpg',
@@ -83,6 +84,17 @@ export default {
         // let eventAt = new Date("2020-07-31");
         // eventAt.setHours(0, 0, 0, 0);
         let eventAt = new Date(data.date_time);
+        
+        if(eventAt<today) {
+          // if latest event has been completed already
+          this.heading = "Latest Event";
+          this.eventTitle = data.title;
+          this.eventDateString = data.date_time_string;
+          if(data.photos[0]) {
+            this.eventPhoto = data.photos[0].photo_url;
+          }
+          return;
+        }
 
         if(eventAt>today) {
           this.eventTitle = data.title;

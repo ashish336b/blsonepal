@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Cover current="Contact Us" image="http://via.placeholder.com/1920x350" />
+    <Cover current="Contact Us" image="" />
     <div class="container py-5 my-5">
       <div class="row">
         <div class="col-12 text-center">

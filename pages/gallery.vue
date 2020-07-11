@@ -1,7 +1,7 @@
 <template>
   <div>
     <Preview :image="previewImage" />
-    <Cover current="Gallery" image="http://via.placeholder.com/1920x350" />
+    <Cover current="Gallery" image="" />
     <div class="container py-5 my-5">
       <div class="row">
         <div class="col-12 text-center">
@@ -21,17 +21,17 @@
         <div class="col-12 text-center">
           <button class="btn btn-sm mb-1"
             :class="(currentFilter === '*') ? 'btn-info': 'btn-outline-info'"
-            @click="filterIsotope('*')" style="margin: 0 -4px;">All</button>
+            @click="filterIsotope('*')" style="margin: 0 -4px;">ALL</button>
           <button v-for="(tag, id) in tags" :key="id"
             class="btn btn-sm mb-1 ml-1"
             :class="(currentFilter === tag) ? 'btn-info': 'btn-outline-info'"
-            @click="filterIsotope(tag)">{{ tag }}</button>
+            @click="filterIsotope(tag)">{{ tag.toUpperCase() }}</button>
         </div>
       </div>
 
       <div class="row mt-5" id="grid">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 col-grid-item" 
-          :class="`${photo.tags.split(',').join(' ')}`" 
+          :class="`${photo.tags.split(',').map(el => el.trim().replace(/ /g, '-')).join(' ')}`" 
           v-for="photo in photos" :key="photo.id"
           @click="gallery(photo.photo_url)">
           <!-- 270x300 -->
@@ -63,7 +63,7 @@ export default {
     return {
       isotope: null,
       // image: "http://via.placeholder.com/270x300",
-      previewImage: "http://via.placeholder.com/1282x720",
+      previewImage: "",
       tags: [],
       photos: [],
       currentFilter: '*',
@@ -106,6 +106,7 @@ export default {
 
     filterIsotope(tag) {
       this.currentFilter = tag;
+      tag = tag.trim().replace(/ /g, '-');
       if(tag != '*') {
         tag = `.${tag}`;
       }

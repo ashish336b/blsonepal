@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Cover current="Donate" image="http://via.placeholder.com/1920x350" />
+    <Cover current="Donate" image="" />
     <div class="container py-5 my-5">
       <div class="row">
         <div class="col-12 col-lg-8 offset-lg-2">

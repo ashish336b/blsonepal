@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Cover image="http://via.placeholder.com/1920x350" current="About Us" />
+    <Cover image="" current="About Us" />
     <div class="container pt-5 mt-5">
       <About />
       <What />

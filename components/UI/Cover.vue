@@ -17,7 +17,7 @@ export default {
 
   data() {
     return {
-      coverImage: 'http://via.placeholder.com/1920x350',
+      coverImage: '',
     }
   },
 

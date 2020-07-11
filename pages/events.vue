@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Cover image="http://via.placeholder.com/1920x350" current="News & Events" />
+    <Cover image="" current="News & Events" />
     <div class="container py-5 my-5">
       <Card v-for="(event, i) in events.slice(itemsPerPage* (pagination.current-1), itemsPerPage*pagination.current)" :key="event.id" :event="event" />
 
