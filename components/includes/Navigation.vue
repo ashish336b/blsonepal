@@ -3,8 +3,20 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <nuxt-link to="/" class="navbar-brand">
-          <img src="/images/logo.jpg" height="52" alt loading="lazy" class="d-none d-lg-block" />
-          <img src="/images/logo.jpg" height="48" alt loading="lazy" class="d-block d-lg-none" />
+          <img
+            src="/images/logo.png"
+            height="52"
+            alt
+            loading="lazy"
+            class="d-none d-lg-block"
+          />
+          <img
+            src="/images/logo.png"
+            height="48"
+            alt
+            loading="lazy"
+            class="d-block d-lg-none"
+          />
         </nuxt-link>
         <button
           class="navbar-toggler"
@@ -23,14 +35,20 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <!-- <a class="nav-link p-0 py-1 active" href="#">Home</a> -->
-              <nuxt-link class="nav-link p-0 py-1" to="/" exact-active-class="active">Home</nuxt-link>
+              <nuxt-link
+                class="nav-link p-0 py-1"
+                to="/"
+                exact-active-class="active"
+                >Home</nuxt-link
+              >
             </li>
             <li class="nav-item">
               <nuxt-link
                 class="nav-link p-0 py-1"
                 to="/aboutus"
                 exact-active-class="active"
-              >About Us</nuxt-link>
+                >About Us</nuxt-link
+              >
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link p-0 py-1" href="#">Projects</a>
@@ -43,11 +61,16 @@
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-              >Projects</a>
+                >Projects</a
+              >
               <div class="dropdown-menu is-radiusless">
-                <nuxt-link class="dropdown-item" to="/children">Children Profile</nuxt-link>
-                <nuxt-link class="dropdown-item" to="/volunteering-projects">Volunteering Projects</nuxt-link>
-                <nuxt-link class="dropdown-item" to="/upcoming-projects">Upcoming Projects</nuxt-link>
+                <!-- <nuxt-link class="dropdown-item" to="/children">Children Profile</nuxt-link> -->
+                <nuxt-link class="dropdown-item" to="/volunteering-projects"
+                  >Volunteering Projects</nuxt-link
+                >
+                <nuxt-link class="dropdown-item" to="/upcoming-projects"
+                  >Upcoming Projects</nuxt-link
+                >
               </div>
             </li>
             <li class="nav-item">
@@ -55,32 +78,45 @@
                 class="nav-link p-0 py-1"
                 to="/events"
                 exact-active-class="active"
-              >News &amp; Events</nuxt-link>
+                >News &amp; Events</nuxt-link
+              >
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link p-0 py-1" to="/blogs" active-class="active">Blogs</nuxt-link>
+              <nuxt-link
+                class="nav-link p-0 py-1"
+                to="/blogs"
+                active-class="active"
+                >Blogs</nuxt-link
+              >
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link p-0 py-1" to="/gallery" exact-active-class="active">Gallery</nuxt-link>
+              <nuxt-link
+                class="nav-link p-0 py-1"
+                to="/gallery"
+                exact-active-class="active"
+                >Gallery</nuxt-link
+              >
             </li>
             <li class="nav-item">
               <nuxt-link
                 class="nav-link p-0 py-1"
                 to="/contactus"
                 exact-active-class="active"
-              >Contact Us</nuxt-link>
+                >Contact Us</nuxt-link
+              >
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-2">
+          <!-- <form class="form-inline my-2 my-lg-2">
             <div>
               <nuxt-link
                 tag="button"
                 to="/donate"
                 class="btn btn-lg btn-danger my-2 my-sm-0 font-weight-bold"
                 type="submit"
-              >DONATE</nuxt-link>
+                >DONATE</nuxt-link
+              >
             </div>
-          </form>
+          </form> -->
         </div>
       </nav>
     </div>

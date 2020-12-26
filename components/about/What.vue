@@ -6,14 +6,15 @@
         <span>DO</span>
       </h1>
       <Separator />
-      <p
-        class="mb-5"
-      >BLSO has as its focus community-based projects and brings local and international volunteers together in Nepal</p>
+      <p class="mb-5">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+        dignissimos doloremque.
+      </p>
     </div>
 
     <div
       class="col-12 col-sm-12 col-md-4 what-we-do-container py-4"
-      style="background-image: url(/images/causes/education.jpg)"
+      style="background-image: url(http://via.placeholder.com/370x300)"
     >
       <div class="what-we-do text-center mx-4">
         <h5 class="text-white">EDUCATION FOR CHILDREN</h5>
@@ -21,7 +22,7 @@
     </div>
     <div
       class="col-12 col-sm-12 col-md-4 what-we-do-container py-4"
-      style="background-image: url(/images/causes/cause003.jpg)"
+      style="background-image: url(http://via.placeholder.com/370x300)"
     >
       <div class="what-we-do text-center mx-4">
         <h5 class="text-white">HEALTH FOR ALL</h5>
@@ -29,23 +30,34 @@
     </div>
     <div
       class="col-12 col-sm-12 col-md-4 what-we-do-container py-4"
-      style="background-image: url(/images/causes/humanTrafficking.jpg)"
+      style="background-image: url(http://via.placeholder.com/370x300)"
     >
       <div class="what-we-do text-center mx-4">
         <h5 class="text-white">PREVENT HUMAN TRAFFICKING</h5>
       </div>
     </div>
     <div class="col-12">
-      <p
-        class="mt-5"
-      >We have conducted many programs through our organization and are proud of our achievements. Our achievements to date include:</p>
+      <p class="mt-5">
+        We have conducted many programs through our organization and are proud
+        of our achievements. Our achievements to date include:
+      </p>
       <ul>
-        <li>Distributing clothes, shoes, school bags, school dresses, stationery, toiletries including toothpaste, soaps and other daily necessities.</li>
-        <li>Building a team of supporters to make education accessible for the children.</li>
+        <li>
+          Distributing clothes, shoes, school bags, school dresses, stationery,
+          toiletries including toothpaste, soaps and other daily necessities.
+        </li>
+        <li>
+          Building a team of supporters to make education accessible for the
+          children.
+        </li>
         <li>Providing job training.</li>
-        <li>Establishing an awareness program on cleanliness and proper hygiene.</li>
+        <li>
+          Establishing an awareness program on cleanliness and proper hygiene.
+        </li>
         <li>Supporting agriculture by providing seeds to the farmers.</li>
-        <li>Providing financial assistance for medical check-ups and medicines.</li>
+        <li>
+          Providing financial assistance for medical check-ups and medicines.
+        </li>
       </ul>
     </div>
   </div>

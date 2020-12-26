@@ -30,12 +30,12 @@
 
         <div class="col-12 col-sm-6 col-md-4 offset-lg-2 col-lg-3">
           <i class="las la-envelope"></i> Email:
-          <a href="mailto:info@blsonepal.com">info@blsonepal.com</a>
+          <a href="mailto:johndoe@example.org">johndoe@example.org</a>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <i class="las la-phone"></i> Phone:
-          <a href="tel:+977 01 5185419">+977 01 5185419</a>
+          <a href="tel:+977 9843684612">+977 9843684612</a>
         </div>
       </div>
     </div>
@@ -45,7 +45,8 @@
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
 header {
-  background-color: #60bf95;
+  // background-color: #60bf95;
+  background-color: #0aaac0;
   font-size: 13px;
   font-weight: 600;
 }

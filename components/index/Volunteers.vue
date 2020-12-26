@@ -4,10 +4,13 @@
       <div class="text-center">
         <h1>
           OUR
-          <span>VOLUNTEERS</span>
+          <span>TEAM</span>
         </h1>
         <Separator />
-        <p class="mb-5">BLSO prides itself on empowering the most marginalised communities of Nepal.</p>
+        <p class="mb-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          reprehenderit.
+        </p>
 
         <div class="row">
           <div
@@ -17,20 +20,29 @@
           >
             <div class="card is-radiusless is-borderless">
               <!-- 270x350 -->
-              <div class="overlay d-flex align-items-center justify-content-center">
+              <div
+                class="overlay d-flex align-items-center justify-content-center"
+              >
                 <a href="#">
                   <i class="lab la-facebook-f"></i>
                 </a>
               </div>
+              <!-- <img
+                :src="
+                  `/images/volunteers/${volunteer.name.replace(/ /g, '_')}.png`
+                "
+                class="card-img-top is-radiusless is-borderless"
+                alt
+              /> -->
               <img
-                :src="`/images/volunteers/${volunteer.name.replace(/ /g, '_')}.png`"
+                src="http://via.placeholder.com/720x1024"
                 class="card-img-top is-radiusless is-borderless"
                 alt
               />
               <div class="card-body py-5">
                 <!-- <h5 class="card-title d-none d-sm-block">Kritish Dhaubanjar</h5> -->
-                <h6 class="card-title">{{volunteer.name}}</h6>
-                <p class="card-text">{{volunteer.position}}</p>
+                <h6 class="card-title">{{ volunteer.name }}</h6>
+                <p class="card-text">{{ volunteer.position }}</p>
               </div>
             </div>
           </div>
@@ -66,47 +78,47 @@ export default {
     return {
       volunteers: [
         {
-          name: "Bhupal Niroula",
+          name: "John Doe",
           position: "Founder"
         },
         {
-          name: "Dipak Niroula",
+          name: "John Doe",
           position: "President"
         },
         {
-          name: "Bhawana Khatri",
+          name: "John Doe",
           position: "Vice President"
         },
         {
-          name: "Shaan Niroula",
+          name: "John Doe",
           position: "Secretory"
         },
         {
-          name: "Padam Niroula",
+          name: "John Doe",
           position: "International Programs Coordinator"
         },
         {
-          name: "Sharmila Karki",
+          name: "John Doe",
           position: "Program Coordinators"
         },
         {
-          name: "Arju Dotel",
+          name: "John Doe",
           position: "Programs Manager"
         },
         {
-          name: "Sangita Basnet",
+          name: "John Doe",
           position: "Office Manager"
         },
         {
-          name: "Kamal Raj Dahal",
+          name: "John Doe",
           position: "Incharge Blso"
         },
         {
-          name: "Dabit Niroula",
+          name: "John Doe",
           position: "Tours Co-Ordinator"
         },
         {
-          name: "Kalpana Thapa",
+          name: "John Doe",
           position: "Volunteer Program Supervisor"
         }
       ]

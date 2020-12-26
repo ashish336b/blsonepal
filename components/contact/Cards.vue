@@ -6,10 +6,7 @@
           <i class="las la-map-marked"></i>
         </h1>
         <h4 class="mb-3">ADDRESS</h4>
-        <p>
-          P.O. Box #3547,
-          <br />Kusunti -13, Lalitpur, Nepal
-        </p>
+        <p>P.O. Box 2469, <br />Skinner Hollow Road, Klamath Falls, Oregon</p>
       </div>
     </div>
     <div class="col-12 col-md-4">
@@ -19,9 +16,9 @@
         </h1>
         <h4 class="mb-3">CALL US</h4>
         <p>
-          <a href="tel:+977 01 5185419">+977 01 5185419</a>
+          <a href="tel:+977 9843684612">+977 9843684612</a>
           <br />
-          <a href="tel:+977 98510 91049">+977 98510 91049</a>
+          <a href="tel:+977 9843684612">+977 9843684612</a>
         </p>
       </div>
     </div>
@@ -32,9 +29,9 @@
         </h1>
         <h4 class="mb-3">EMAIL US</h4>
         <p>
-          <a href="mailto:info@blsonepal.com">info@blsonepal.com</a>
+          <a href="mailto:info@example.org">info@example.org</a>
           <br />
-          <a href="mailto:blsonepal@gmail.com">blsonepal@gmail.com</a>
+          <a href="mailto:info@gmail.com">info@gmail.com</a>
         </p>
       </div>
     </div>

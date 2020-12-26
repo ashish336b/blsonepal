@@ -2,7 +2,7 @@
   <aside @click="$emit('toggle')">
     <ul class="list-group is-radiusless py-4">
       <li class="list-group-item mb-4">
-        <img src="/images/logo.jpg" class="img-fluid" />
+        <img src="/images/logo.png" class="img-fluid" />
       </li>
 
       <nuxt-link
@@ -23,18 +23,14 @@
         class="list-group-item pl-4 link-item"
         exact-active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-sitemap"></i> ABOUT US
-        </span>
+        <span> <i class="las la-sitemap"></i> ABOUT US </span>
       </nuxt-link>
 
       <li class="list-group-item pl-4 link-item is-borderless">
-        <span>
-          <i class="las la-briefcase"></i> PROJECTS
-        </span>
+        <span> <i class="las la-briefcase"></i> PROJECTS </span>
       </li>
 
-      <nuxt-link
+      <!-- <nuxt-link
         to="/children"
         tag="li"
         class="list-group-item pl-5 link-item is-borderless"
@@ -43,7 +39,7 @@
         <span>
           <i class="las la-briefcase"></i> Children Profile
         </span>
-      </nuxt-link>
+      </nuxt-link> -->
 
       <nuxt-link
         to="/volunteering-projects"
@@ -51,9 +47,7 @@
         class="list-group-item pl-5 link-item is-borderless"
         exact-active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-briefcase"></i> Volunteering Projects
-        </span>
+        <span> <i class="las la-briefcase"></i> Volunteering Projects </span>
       </nuxt-link>
 
       <nuxt-link
@@ -62,9 +56,7 @@
         class="list-group-item pl-5 link-item"
         exact-active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-briefcase"></i> Upcoming Projects
-        </span>
+        <span> <i class="las la-briefcase"></i> Upcoming Projects </span>
       </nuxt-link>
 
       <nuxt-link
@@ -73,9 +65,7 @@
         class="list-group-item pl-4 link-item"
         exact-active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-newspaper"></i> NEWS &amp; EVENTS
-        </span>
+        <span> <i class="las la-newspaper"></i> NEWS &amp; EVENTS </span>
       </nuxt-link>
       <nuxt-link
         to="/blogs"
@@ -83,9 +73,7 @@
         class="list-group-item pl-4 link-item"
         active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-rss"></i> BLOGS
-        </span>
+        <span> <i class="las la-rss"></i> BLOGS </span>
       </nuxt-link>
       <nuxt-link
         to="/gallery"
@@ -93,9 +81,7 @@
         class="list-group-item pl-4 link-item"
         exact-active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-photo-video"></i> GALLERY
-        </span>
+        <span> <i class="las la-photo-video"></i> GALLERY </span>
       </nuxt-link>
       <nuxt-link
         to="/contactus"
@@ -103,16 +89,14 @@
         class="list-group-item pl-4 link-item"
         exact-active-class="nuxt-active"
       >
-        <span>
-          <i class="las la-phone"></i> CONTACT US
-        </span>
+        <span> <i class="las la-phone"></i> CONTACT US </span>
       </nuxt-link>
       <li class="py-3"></li>
-      <nuxt-link to="/donate" tag="li" class="list-group-item pl-4 pb-4">
+      <!-- <nuxt-link to="/donate" tag="li" class="list-group-item pl-4 pb-4">
         <div class="donate">
           <button class="btn btn-lg btn-danger font-weight-bold">DONATE</button>
         </div>
-      </nuxt-link>
+      </nuxt-link> -->
 
       <li class="py-3"></li>
     </ul>
@@ -196,4 +180,3 @@ ul {
   }
 }
 </style>
-

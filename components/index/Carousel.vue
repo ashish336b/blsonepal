@@ -8,94 +8,119 @@
     <div class="carousel-inner">
       <div
         class="carousel-item active"
-        :style="`background-image: url(/images/carousels/carousel001.jpg)`"
+        :style="`background-image: url(http://via.placeholder.com/1920x750)`"
       >
         <div class="item d-flex">
-          <div class="jumbotron mb-0 align-items-center d-flex align-items-center">
+          <div
+            class="jumbotron mb-0 align-items-center d-flex align-items-center"
+          >
             <div class="container text-white">
               <h1>WE CAN HELP SOMEONE!</h1>
-              <p
-                class="lead"
-              >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <p class="lead">
+                This is a simple hero unit, a simple jumbotron-style component
+                for calling extra attention to featured content or information.
+              </p>
               <br />
               <nuxt-link
                 to="/donate"
                 class="btn btn-outline-white mr-2"
                 href="#"
                 role="button"
-              >DONATE NOW</nuxt-link>
+                >DONATE NOW</nuxt-link
+              >
               <nuxt-link
                 to="/aboutus"
                 class="btn btn-outline-white"
                 href="#"
                 role="button"
-              >LEARN MORE</nuxt-link>
+                >LEARN MORE</nuxt-link
+              >
             </div>
           </div>
         </div>
       </div>
       <div
         class="carousel-item"
-        :style="`background-image: url(/images/carousels/carousel002.jpg)`"
+        :style="`background-image: url(http://via.placeholder.com/1920x750)`"
       >
         <div class="item d-flex">
-          <div class="jumbotron mb-0 align-items-center d-flex align-items-center">
+          <div
+            class="jumbotron mb-0 align-items-center d-flex align-items-center"
+          >
             <div class="container text-white">
               <h1>WE CAN HELP SOMEONE!</h1>
-              <p
-                class="lead"
-              >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <p class="lead">
+                This is a simple hero unit, a simple jumbotron-style component
+                for calling extra attention to featured content or information.
+              </p>
               <br />
               <nuxt-link
                 to="/donate"
                 class="btn btn-outline-white mr-2"
                 href="#"
                 role="button"
-              >DONATE NOW</nuxt-link>
+                >DONATE NOW</nuxt-link
+              >
               <nuxt-link
                 to="/aboutus"
                 class="btn btn-outline-white"
                 href="#"
                 role="button"
-              >LEARN MORE</nuxt-link>
+                >LEARN MORE</nuxt-link
+              >
             </div>
           </div>
         </div>
       </div>
       <div
         class="carousel-item"
-        :style="`background-image: url(/images/carousels/carousel003.jpg)`"
+        :style="`background-image: url(http://via.placeholder.com/1920x750)`"
       >
         <div class="item d-flex">
-          <div class="jumbotron mb-0 align-items-center d-flex align-items-center">
+          <div
+            class="jumbotron mb-0 align-items-center d-flex align-items-center"
+          >
             <div class="container text-white">
               <h1>WE CAN HELP SOMEONE!</h1>
-              <p
-                class="lead"
-              >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <p class="lead">
+                This is a simple hero unit, a simple jumbotron-style component
+                for calling extra attention to featured content or information.
+              </p>
               <br />
               <nuxt-link
                 to="/donate"
                 class="btn btn-outline-white mr-2"
                 href="#"
                 role="button"
-              >DONATE NOW</nuxt-link>
+                >DONATE NOW</nuxt-link
+              >
               <nuxt-link
                 to="/aboutus"
                 class="btn btn-outline-white"
                 href="#"
                 role="button"
-              >LEARN MORE</nuxt-link>
+                >LEARN MORE</nuxt-link
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <a
+      class="carousel-control-prev"
+      href="#carousel"
+      role="button"
+      data-slide="prev"
+    >
       <i class="las la-angle-left"></i>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <a
+      class="carousel-control-next"
+      href="#carousel"
+      role="button"
+      data-slide="next"
+    >
       <i class="las la-angle-right"></i>
       <span class="sr-only">Next</span>
     </a>

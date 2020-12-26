@@ -1,9 +1,12 @@
 <template>
   <div>
-    <Cover image="http://via.placeholder.com/1920x350" current="Children Profile" />
+    <Cover
+      image="http://via.placeholder.com/1920x350"
+      current="Children Profile"
+    />
     <div class="container py-5 my-5">
       <Card
-        v-for="(child,index) in children"
+        v-for="(child, index) in children"
         :key="index"
         :info="child"
         :cardId="`card_id_${firstName(child.name)}`"
