@@ -48,7 +48,7 @@
             class="jumbotron mb-0 align-items-center d-flex align-items-center"
           >
             <div class="container text-white">
-              <h1>Website Under Construction!</h1>
+              <h1>Website Under Construction</h1>
               <p class="lead">
                 This is a simple hero unit, a simple jumbotron-style component
                 for calling extra attention to featured content or information.
