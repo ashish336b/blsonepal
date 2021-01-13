@@ -1,6 +1,7 @@
 export const state = () => ({
-  isLoading: false
-})
+  isLoading: false,
+  itemsPerPage: 9
+});
 
 export const mutations = {
   set(state) {
@@ -10,10 +11,10 @@ export const mutations = {
   unset(state) {
     state.isLoading = false;
   }
-}
+};
 
 export const getters = {
   isLoading(state) {
     return state.isLoading;
   }
-}
+};

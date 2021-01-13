@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Preview image="http://via.placeholder.com/1282x720" />
-    <Cover current="Gallery" image="http://via.placeholder.com/1920x350" />
+    <Preview :image="previewImage" />
+    <Cover current="Gallery" image="" />
     <div class="container py-5 my-5">
       <div class="row">
         <div class="col-12 text-center">
@@ -11,36 +11,51 @@
           </h1>
           <Separator />
           <p>
-            We create events aiming to pear to the voice for children and gather for support.
-            Please update with our events and confirm you presence.
+            We create events aiming to pear to the voice for children and gather
+            for support. Please update with our events and confirm you presence.
           </p>
         </div>
       </div>
 
       <div class="row mt-5">
         <div class="col-12 text-center">
-          <button class="btn btn-sm btn-info mb-1">Metal</button>
-          <button class="btn btn-sm btn-outline-info mb-1">Transition</button>
-          <button class="btn btn-sm btn-outline-info mb-1">-ium</button>
-          <button class="btn btn-sm btn-outline-info mb-1">Metal</button>
-          <button class="btn btn-sm btn-outline-info mb-1">Transition</button>
-          <button class="btn btn-sm btn-outline-info mb-1">-ium</button>
-          <button class="btn btn-sm btn-outline-info mb-1">Metal</button>
+          <button
+            class="btn btn-sm mb-1"
+            :class="currentFilter === '*' ? 'btn-info' : 'btn-outline-info'"
+            @click="filterIsotope('*')"
+            style="margin: 0 -4px;"
+          >
+            ALL
+          </button>
+          <button
+            v-for="(tag, id) in tags"
+            :key="id"
+            class="btn btn-sm mb-1 ml-1"
+            :class="currentFilter === tag ? 'btn-info' : 'btn-outline-info'"
+            @click="filterIsotope(tag)"
+          >
+            {{ tag.toUpperCase() }}
+          </button>
         </div>
       </div>
 
       <div class="row mt-5" id="grid">
         <div
           class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 col-grid-item"
-          v-for="i in 8"
-          :key="i"
-          @click="gallery"
+          :class="
+            `${photo.tags.map(el => el.trim().replace(/ /g, '-')).join(' ')}`
+          "
+          v-for="photo in photos"
+          :key="photo.id"
+          @click="gallery($axios.defaults.baseURL + photo.Image.url)"
         >
           <!-- 270x300 -->
           <!-- <img src="http://via.placeholder.com/270x300" class="img-fluid" /> -->
           <div
             class="grid-item p-4"
-            :style="`background-image: url(http://via.placeholder.com/270x300)`"
+            :style="
+              `background-image: url(${$axios.defaults.baseURL}${photo.Image.url})`
+            "
           >
             <div class="d-flex align-items-center justify-content-center">
               <h1 class="display-4 text-white">
@@ -59,29 +74,65 @@ import Isotope from "isotope-layout";
 import Cover from "@/components/UI/Cover";
 import Separator from "@/components/UI/Separator";
 import Preview from "@/components/UI/Preview";
-
 export default {
   data() {
     return {
       isotope: null,
-      image: "http://via.placeholder.com/270x300"
+      // image: "http://via.placeholder.com/270x300",
+      previewImage: "",
+      tags: [],
+      photos: [],
+      currentFilter: "*"
     };
   },
-
   mounted() {
-    let gallery = document.getElementById("grid");
-
-    this.isotope = new Isotope(gallery, {
-      itemSelector: ".col-grid-item"
+    this.$store.commit("set");
+    this.$axios.get("/tags").then(({ data }) => {
+      this.tags = data.map(e => {
+        return e.name;
+      });
     });
+    this.$axios
+      .get("/galleries")
+      .then(res => {
+        if (res.status === 200) {
+          // this.tags = res.data.tags;
+          this.photos = res.data.map(e => {
+            e.tags = e.tags.map(t => t.name);
+            return e;
+          });
+          this.relayoutGallery();
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        this.$store.commit("unset");
+      });
   },
-
   methods: {
-    gallery() {
+    gallery(photourl) {
+      this.previewImage = photourl;
       $("#preview").modal("show");
+    },
+    relayoutGallery() {
+      this.$nextTick(() => {
+        let gallery = document.getElementById("grid");
+        this.isotope = new Isotope(gallery, {
+          itemSelector: ".col-grid-item"
+        });
+      });
+    },
+    filterIsotope(tag) {
+      this.currentFilter = tag;
+      tag = tag.trim().replace(/ /g, "-");
+      if (tag != "*") {
+        tag = `.${tag}`;
+      }
+      this.isotope.arrange({ filter: tag });
     }
   },
-
   components: {
     Cover,
     Separator,
@@ -92,7 +143,6 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
-
 .grid-item {
   height: 300px;
   background-position: center;
@@ -119,11 +169,9 @@ export default {
     }
   }
 }
-
 .col-grid-item {
   height: 300px;
 }
-
 @media screen and (max-width: 425px) {
   .grid-item {
     height: 200px;

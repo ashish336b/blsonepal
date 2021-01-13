@@ -1,10 +1,17 @@
 <template>
   <div>
-    <Cover current="Our Blog" image="http://via.placeholder.com/1920x350" />
+    <Cover current="Our Blog" image="" />
     <div class="container py-5 my-5">
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4" v-for="i in 9" :key="i">
-          <Card />
+        <div
+          class="col-12 col-sm-6 col-md-6 col-lg-4"
+          v-for="post in posts.slice(
+            itemsPerPage * (pagination.current - 1),
+            itemsPerPage * pagination.current
+          )"
+          :key="post.id"
+        >
+          <Card :cardItem="post" type="post" />
         </div>
       </div>
 
@@ -12,22 +19,36 @@
         <div class="col-12 my-3">
           <nav>
             <ul class="pagination ml-auto">
-              <li class="page-item mr-1 disabled">
-                <a class="page-link is-radiusless" href="#">
+              <li
+                class="page-item mr-1"
+                :class="{ disabled: !pagination.previous }"
+              >
+                <a
+                  class="page-link is-radiusless"
+                  @click="paginate(pagination.previous)"
+                  href="#"
+                >
                   <i class="las la-angle-double-left"></i>
                 </a>
               </li>
-              <li class="page-item mx-1 active">
-                <a class="page-link px-3" href="#">1</a>
+              <li
+                class="page-item mx-1"
+                v-for="page in pagination.range"
+                :key="page"
+                :class="{ active: pagination.current == page }"
+                @click="paginate(page)"
+              >
+                <a class="page-link px-3" href="#">{{ page }}</a>
               </li>
-              <li class="page-item mx-1">
-                <a class="page-link px-3" href="#">2</a>
-              </li>
-              <li class="page-item mx-1">
-                <a class="page-link px-3" href="#">3</a>
-              </li>
-              <li class="page-item ml-1">
-                <a class="page-link is-radiusless" href="#">
+              <li
+                class="page-item ml-1"
+                :class="{ disabled: !pagination.next }"
+              >
+                <a
+                  class="page-link is-radiusless"
+                  @click="paginate(pagination.next)"
+                  href="#"
+                >
                   <i class="las la-angle-double-right"></i>
                 </a>
               </li>
@@ -42,21 +63,61 @@
 <script>
 import Cover from "@/components/UI/Cover";
 import Card from "@/components/UI/Card";
+import paginate from "@/components/utils/paginate";
 export default {
   components: {
     Cover,
     Card
+  },
+  data() {
+    return {
+      posts: [],
+      itemsPerPage: this.$store.state.itemsPerPage,
+      pagination: {},
+      meta: {},
+      currentPage:
+        parseInt(localStorage.getItem("blogPostsCurrentPageNumber")) || 1
+    };
+  },
+  mounted() {
+    this.$store.commit("set");
+    this.$axios
+      .get("/blogs")
+      .then(res => {
+        this.posts = res.data;
+        this.paginate(this.currentPage);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        this.$store.commit("unset");
+      });
+  },
+  methods: {
+    paginate(current) {
+      localStorage.setItem("blogPostsCurrentPageNumber", current);
+      this.pagination = paginate({
+        per: this.itemsPerPage,
+        limit: 5,
+        total: this.posts.length,
+        current
+      });
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    if (from.name !== "blogs-id")
+      localStorage.removeItem("blogPostsCurrentPageNumber");
+    next();
   }
 };
 </script>
 
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
-
 .col-12 {
   margin-bottom: 32px;
 }
-
 .pagination {
   max-width: min-content;
   .page-item {
@@ -71,7 +132,6 @@ export default {
       }
     }
   }
-
   .active {
     a {
       border-color: $primary;
@@ -79,7 +139,6 @@ export default {
       color: #fff;
     }
   }
-
   .disabled {
     a {
       color: #ababab;
@@ -93,4 +152,3 @@ export default {
   }
 }
 </style>
-

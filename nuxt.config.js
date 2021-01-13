@@ -92,7 +92,15 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ["@nuxtjs/axios", "@nuxtjs/markdownit"],
+
+  axios: {
+    baseURL: "http://app.medmandu.life:1222"
+  },
+
+  markdownit: {
+    injected: true
+  },
   /*
    ** Build configuration
    */

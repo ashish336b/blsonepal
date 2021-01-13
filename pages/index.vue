@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Carousel />
+    <Carousel :carousels="carousels" />
     <Causes />
     <Children />
     <Help />
     <Volunteers />
     <Event />
-    <Blogs />
+    <Blogs :latestPosts="latestPosts" />
     <!-- <Sponsors /> -->
   </div>
 </template>
@@ -22,6 +22,40 @@ import Blogs from "@/components/index/Blogs";
 import Sponsors from "@/components/index/Sponsors";
 
 export default {
+  data() {
+    return {
+      carousels: [],
+      latestPosts: []
+    };
+  },
+
+  mounted() {
+    this.$store.commit("set");
+    this.$axios
+      .get("/carousels")
+      .then(res => {
+        this.carousels = res.data;
+      })
+      .catch(err => {
+        console.log(err.response);
+      })
+      .finally(() => {
+        this.$store.commit("unset");
+      });
+
+    this.$axios
+      .get("/blogs")
+      .then(res => {
+        this.latestPosts = res.data;
+      })
+      .catch(err => {
+        console.log(err.response);
+      })
+      .finally(() => {
+        this.$store.commit("unset");
+      });
+  },
+
   components: {
     Carousel,
     Causes,
@@ -35,5 +69,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

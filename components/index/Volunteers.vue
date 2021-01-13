@@ -35,14 +35,14 @@
                 alt
               /> -->
               <img
-                src="http://via.placeholder.com/720x1024"
+                :src="$axios.defaults.baseURL + volunteer.Image.url"
                 class="card-img-top is-radiusless is-borderless"
                 alt
               />
               <div class="card-body py-5">
                 <!-- <h5 class="card-title d-none d-sm-block">Kritish Dhaubanjar</h5> -->
-                <h6 class="card-title">{{ volunteer.name }}</h6>
-                <p class="card-text">{{ volunteer.position }}</p>
+                <h6 class="card-title">{{ volunteer.Name }}</h6>
+                <p class="card-text">{{ volunteer.Profession }}</p>
               </div>
             </div>
           </div>
@@ -76,54 +76,16 @@ import Separator from "@/components/UI/Separator";
 export default {
   data() {
     return {
-      volunteers: [
-        {
-          name: "John Doe",
-          position: "Founder"
-        },
-        {
-          name: "John Doe",
-          position: "President"
-        },
-        {
-          name: "John Doe",
-          position: "Vice President"
-        },
-        {
-          name: "John Doe",
-          position: "Secretory"
-        },
-        {
-          name: "John Doe",
-          position: "International Programs Coordinator"
-        },
-        {
-          name: "John Doe",
-          position: "Program Coordinators"
-        },
-        {
-          name: "John Doe",
-          position: "Programs Manager"
-        },
-        {
-          name: "John Doe",
-          position: "Office Manager"
-        },
-        {
-          name: "John Doe",
-          position: "Incharge Blso"
-        },
-        {
-          name: "John Doe",
-          position: "Tours Co-Ordinator"
-        },
-        {
-          name: "John Doe",
-          position: "Volunteer Program Supervisor"
-        }
-      ]
+      volunteers: []
     };
   },
+
+  beforeCreate() {
+    this.$axios.get("/teams").then(({ data }) => {
+      this.volunteers = data;
+    });
+  },
+
   components: {
     Separator
   }
