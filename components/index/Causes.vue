@@ -4,7 +4,7 @@
       <div class="text-center">
         <h1>
           OUR
-          <span>Our Practice Area</span>
+          <span> Practice Area</span>
         </h1>
         <Separator />
         <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
