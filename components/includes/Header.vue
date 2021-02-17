@@ -30,7 +30,7 @@
 
         <div class="col-12 col-sm-6 col-md-4 offset-lg-2 col-lg-3">
           <i class="las la-envelope"></i> Email:
-          <a href="mailto:info@blsonepal.com">info@blsonepal.com</a>
+          <a href="mailto:info@blsonepal.com">youremail@gmail.com</a>
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -45,7 +45,7 @@
 <style scoped lang="scss">
 @import "@/assets/scss/elements.scss";
 header {
-  background-color: #60bf95;
+  background-color: #004e7c;
   font-size: 13px;
   font-weight: 600;
 }

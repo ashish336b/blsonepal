@@ -4,12 +4,10 @@
       <div class="text-center">
         <h1>
           OUR
-          <span>CAUSES</span>
+          <span>Our Practice Area</span>
         </h1>
         <Separator />
-        <p
-          class="mb-5"
-        >We're partnering with donors and local volunteers to tackle Nepal's greatest problems.</p>
+        <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
 
         <div class="row">
           <div class="col-12 col-md-6 col-lg-4 mb-5" v-for="i in 4" :key="i">
@@ -23,8 +21,8 @@
                   alt
                 />
                 <div class="card-body py-5">
-                  <h5 class="card-title">{{causes[i - 1].title}}</h5>
-                  <p class="card-text">{{causes[i - 1].description}}</p>
+                  <h5 class="card-title">{{ causes[i - 1].title }}</h5>
+                  <p class="card-text">{{ causes[i - 1].description }}</p>
                 </div>
               </div>
               <!-- <div class="mt-3 d-flex justify-content-between align-items-center">
@@ -32,7 +30,11 @@
                 <h6 class="mb-0">NPR 25,000 / NPR 50,000</h6>
               </div>-->
             </div>
-            <div v-if="i == 4" style="height: 100%" class="d-none d-sm-none d-md-block d-lg-none">
+            <div
+              v-if="i == 4"
+              style="height: 100%"
+              class="d-none d-sm-none d-md-block d-lg-none"
+            >
               <nuxt-link
                 to="/aboutus"
                 tag="div"
@@ -40,7 +42,9 @@
                 style="height: 100%"
               >
                 <!-- 370x200 -->
-                <div class="card-body more d-flex align-items-center justify-content-center">
+                <div
+                  class="card-body more d-flex align-items-center justify-content-center"
+                >
                   <h4 class="mr-2">Learn More</h4>
                   <h3>
                     <i class="las la-arrow-right"></i>
@@ -63,29 +67,28 @@ export default {
     return {
       causes: [
         {
-          title: "Education For Children",
-          description:
-            "Every last child deserves the opportunity to learn. BLSO Nepal works every day to ensure all children have the best chance to learn.",
-          image: "/images/causes/education.jpg"
+          title: "Employment Law",
+          description: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+          image: "http://via.placeholder.com/350x190",
         },
         {
-          title: "Health For All",
+          title: "Personal Enquiry",
           description:
-            "Our Volunteers raise awareness by demonstrating related activities among rural people about health and hygiene.",
-          image: "/images/causes/cause003.jpg"
+            "Lorem ipsum dolor sit, consectetur amet consectetur adipisicing.",
+          image: "http://via.placeholder.com/350x190",
         },
         {
-          title: "Preventing Human Trafficking",
+          title: "Family Law",
           description:
             "Help Draft laws and create comprehensive national anti-trafficking strategies, also assisting with resources to implement them.",
-          image: "/images/causes/humanTrafficking.jpg"
-        }
-      ]
+          image: "http://via.placeholder.com/350x190",
+        },
+      ],
     };
   },
   components: {
-    Separator
-  }
+    Separator,
+  },
 };
 </script>
 

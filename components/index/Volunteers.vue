@@ -4,10 +4,13 @@
       <div class="text-center">
         <h1>
           OUR
-          <span>VOLUNTEERS</span>
+          <span>TEAMS</span>
         </h1>
         <Separator />
-        <p class="mb-5">BLSO prides itself on empowering the most marginalised communities of Nepal.</p>
+        <p class="mb-5">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+          aspernatur?
+        </p>
 
         <div class="row">
           <div
@@ -17,20 +20,22 @@
           >
             <div class="card is-radiusless is-borderless">
               <!-- 270x350 -->
-              <div class="overlay d-flex align-items-center justify-content-center">
+              <div
+                class="overlay d-flex align-items-center justify-content-center"
+              >
                 <a href="#">
                   <i class="lab la-facebook-f"></i>
                 </a>
               </div>
               <img
-                :src="`/images/volunteers/${volunteer.name.replace(/ /g, '_')}.png`"
+                :src="`http://via.placeholder.com/160x160`"
                 class="card-img-top is-radiusless is-borderless"
                 alt
               />
               <div class="card-body py-5">
                 <!-- <h5 class="card-title d-none d-sm-block">Kritish Dhaubanjar</h5> -->
-                <h6 class="card-title">{{volunteer.name}}</h6>
-                <p class="card-text">{{volunteer.position}}</p>
+                <h6 class="card-title">{{ volunteer.name }}</h6>
+                <p class="card-text">{{ volunteer.position }}</p>
               </div>
             </div>
           </div>
@@ -67,54 +72,30 @@ export default {
       volunteers: [
         {
           name: "Bhupal Niroula",
-          position: "Founder"
+          position: "Founder",
         },
         {
           name: "Dipak Niroula",
-          position: "President"
+          position: "President",
         },
         {
           name: "Bhawana Khatri",
-          position: "Vice President"
+          position: "Vice President",
         },
         {
           name: "Shaan Niroula",
-          position: "Secretory"
+          position: "Secretory",
         },
         {
           name: "Padam Niroula",
-          position: "International Programs Coordinator"
+          position: "International Programs Coordinator",
         },
-        {
-          name: "Sharmila Karki",
-          position: "Program Coordinators"
-        },
-        {
-          name: "Arju Dotel",
-          position: "Programs Manager"
-        },
-        {
-          name: "Sangita Basnet",
-          position: "Office Manager"
-        },
-        {
-          name: "Kamal Raj Dahal",
-          position: "Incharge Blso"
-        },
-        {
-          name: "Dabit Niroula",
-          position: "Tours Co-Ordinator"
-        },
-        {
-          name: "Kalpana Thapa",
-          position: "Volunteer Program Supervisor"
-        }
-      ]
+      ],
     };
   },
   components: {
-    Separator
-  }
+    Separator,
+  },
 };
 </script>
 

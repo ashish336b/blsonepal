@@ -5,7 +5,7 @@
     <Children />
     <Help />
     <Volunteers />
-    <Event />
+    <!-- <Event /> -->
     <Blogs />
     <!-- <Sponsors /> -->
   </div>
@@ -30,8 +30,8 @@ export default {
     Event,
     Volunteers,
     Blogs,
-    Sponsors
-  }
+    Sponsors,
+  },
 };
 </script>
 

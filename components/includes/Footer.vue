@@ -5,7 +5,11 @@
         <div class="col-12 col-lg-4 mb-5">
           <h5>ABOUT US</h5>
           <hr class="mt-1" />
-          <p>Better Life Social Organization, BLSO Nepal is a non-profit, non-religious and non-political organization which was founded in 2011. We are the registered NGO under the Society Act of District Administration Office, Kathmandu (Reg. No. 723).</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            provident dolores rerum sapiente non hic delectus quo iusto?
+            Debitis, cumque.
+          </p>
           <br />
 
           <h5>FOLLOW US</h5>
@@ -40,7 +44,10 @@
           <ul class="list-group">
             <!-- EMPTY -->
             <li>
-              <a href="#">Please update with our projects, events and confirm you presence.</a>
+              <a href="#"
+                >Please update with our projects, events and confirm you
+                presence.</a
+              >
             </li>
             <!-- ELSE -->
             <!-- <li>
@@ -56,23 +63,8 @@
           <hr class="mt-1" />
           <ul class="list-group">
             <li>
-              <nuxt-link to="/gallery">
-                <i class="las la-angle-right"></i> Children Profile
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/volunteering-projects">
-                <i class="las la-angle-right"></i> Volunteering Projects
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/upcoming-projects">
-                <i class="las la-angle-right"></i> Upcoming Projects
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/events">
-                <i class="las la-angle-right"></i> News &amp; Events
+              <nuxt-link to="/blogs">
+                <i class="las la-angle-right"></i> About Us
               </nuxt-link>
             </li>
             <li>
@@ -81,8 +73,13 @@
               </nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/gallery">
-                <i class="las la-angle-right"></i> Gallery
+              <nuxt-link to="/blogs">
+                <i class="las la-angle-right"></i> Contact Us
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/blogs">
+                <i class="las la-angle-right"></i> Teams
               </nuxt-link>
             </li>
           </ul>
@@ -102,13 +99,14 @@
 
             <li>
               <i class="las la-envelope"></i>
-              <a href="mailto:info@blsonepal.com">info@blsonepal.com</a>,
+              <a href="mailto:info@gmail.com">info@gmail.com</a>,
             </li>
             <li class="mb-3 ml-4">
-              <a href="mailto:blsonepal@gmail.com">blsonepal@gmail.com</a>
+              <a href="mailto:info@gmail.com">info@gmail.com</a>
             </li>
             <li>
-              <i class="las la-map-marked"></i> P.O. Box #3547, Kusunti -13, Lalitpur, Nepal
+              <i class="las la-map-marked"></i> P.O. Box #3547, Balkot -13,
+              Bhaktpur, Nepal
             </li>
           </ul>
         </div>

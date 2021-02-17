@@ -3,7 +3,7 @@
     <Cover image="http://via.placeholder.com/1920x350" current="About Us" />
     <div class="container pt-5 mt-5">
       <About />
-      <What />
+      <!-- <What /> -->
       <Volunteers />
     </div>
   </div>
@@ -22,8 +22,8 @@ export default {
     About,
     What,
     Volunteers,
-    Separator
-  }
+    Separator,
+  },
 };
 </script>
 
