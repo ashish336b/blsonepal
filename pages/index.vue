@@ -3,7 +3,7 @@
     <Carousel />
     <Causes />
     <Children />
-    <Help />
+    <!-- <Help /> -->
     <Volunteers />
     <!-- <Event /> -->
     <Blogs />
